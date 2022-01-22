@@ -1,0 +1,19 @@
+.services {
+  margin-bottom: 150px;
+  position: relative;
+}
+
+.services__title {
+  margin-bottom: 50px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.services__item {
+  display: flex;
+}
+
