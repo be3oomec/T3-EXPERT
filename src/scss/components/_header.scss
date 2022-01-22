@@ -1,5 +1,4 @@
 .header {
-
   &--fixed {
     position: fixed;
     top: 0;
@@ -10,7 +9,7 @@
     animation-name: show_header;
     animation-duration: 0.3s;
   }
-  
+
   @keyframes show_header {
     0% {
       opacity: 0;
@@ -20,11 +19,6 @@
       opacity: 1;
       top: 0;
     }
-  }
-
-  .burger {
-    display: none;
-    cursor: pointer;
   }
 
   .header__menu.active {
@@ -50,70 +44,187 @@
     transform: translate(0%);
     transition: all 0.3s;
   }
+}
 
-  @include _992 {
-    .burger {
-      display: block;
-      height: 20px;
-      width: 30px;
-      margin: 10px;
-      z-index: 102;
-      cursor: pointer;
-      position: relative;
-      &.burger-active {
-        &:before {
-          background-color: $white;
-          transform: rotate(45deg);
-          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
-          top: 8px;
-        }
-        &:after {
-          background-color: $white;
-          transform: rotate(-45deg);
-          bottom: 10px;
-          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
-        }
-        & span {
-          transform: scale(0);
-        }
-      }
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background-color: $black;
-        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
-      }
-
-      &:before {
-        top: 0;
-        left: 0;
-      }
-      &::after {
-        bottom: 0;
-        left: 0;
-      }
-      span {
-        position: absolute;
-        top: 9px;
-        right: 0;
-        width: 100%;
-        background-color: $black;
-        height: 2px;
-        transform: scale(1);
-        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
-      }
+.burger {
+  display: block;
+  height: 20px;
+  width: 30px;
+  margin: 10px;
+  z-index: 102;
+  cursor: pointer;
+  position: relative;
+  &.burger-active {
+    &:before {
+      background-color: $white;
+      transform: rotate(45deg);
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+      top: 8px;
     }
-
-    .header__menu {
-      position: absolute;
-      transform: translate(-100%);
+    &:after {
+      background-color: $white;
+      transform: rotate(-45deg);
+      bottom: 10px;
+      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
     }
-    .header__link {
-      @include adaptive-value('font-size', 20, 15, 1);
+    & span {
+      transform: scale(0);
     }
   }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $black;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+  span {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 100%;
+    background-color: $black;
+    height: 2px;
+    transform: scale(1);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+}
+
+.header__top {
+  background-color: $blue-900;
+  padding: 16px 0;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.header__link {
+  color: $white;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s opacity;
+
+  &:focus {
+    color: $orange;
+  }
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.header__bottom {
+  background-color: $white;
+  padding: 25px 0;
+}
+
+.header__bottom-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header__bottom-item {
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+.header__bottom-link {
+  color: $blue-900;
+
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s opacity;
+
+  &:focus {
+    color: $orange;
+  }
+
+  &:hover {
+    color: $orange;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.header__phone {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  &:focus {
+    .header__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:hover {
+    .header__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:active {
+    .header__phone-number {
+      opacity: 0.5;
+    }
+  }
+}
+
+.header__phone-number {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  color: $blue-900;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s opacity;
+}
+
+.header__phone-icon {
+  width: 23px;
+  height: 22px;
+  fill: currentColor;
+
+  position: absolute;
+  top: 0;
+  left: -34px;
+}
+
+.header__phone-text {
+  font-size: 15px;
+  color: $orange;
+  border-bottom: 1px solid $orange;
 }

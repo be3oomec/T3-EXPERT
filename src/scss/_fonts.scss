@@ -1,2 +1,6 @@
 @include font-face("Roboto", "../fonts/Roboto-Regular", 400, normal);
+@include font-face("Roboto", "../fonts/Roboto-Medium", 500, normal);
 @include font-face("Roboto", "../fonts/Roboto-Bold", 700, normal);
+@include font-face("Noto Serif", "../fonts/NotoSerif-Regular", 400, normal);
+@include font-face("Noto Serif", "../fonts/NotoSerif-Bold", 700, normal);
+@include font-face("Bitter", "../fonts/Bitter-Medium", 500, normal);
