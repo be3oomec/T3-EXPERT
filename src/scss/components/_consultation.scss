@@ -1,6 +1,9 @@
 .consultation {
+  background-repeat: no-repeat;
+  background-position: center bottom;
   background-color: #F1F3F5;
   padding: 90px 0;
+  @include adaptive-value('margin-bottom', 150, 45, 1);
   text-align: center;
 
   display: flex;

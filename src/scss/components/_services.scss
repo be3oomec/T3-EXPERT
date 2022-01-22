@@ -1,5 +1,5 @@
 .services {
-  margin-bottom: 150px;
+  @include adaptive-value('margin-bottom', 150, 45, 1);
   position: relative;
 }
 

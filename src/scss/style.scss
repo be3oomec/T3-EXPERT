@@ -1,10 +1,10 @@
 // базовые подключения
-@import "vars";
-@import "libs";
-@import "reset";
-@import "mixins";
-@import "fonts";
-@import "settings";
+@import "options/vars";
+@import "options/libs";
+@import "options/reset";
+@import "options/mixins";
+@import "options/fonts";
+@import "options/settings";
 
 // ==== MAIN COMPONENTS === \\
 @import 'components/header';
@@ -12,6 +12,10 @@
 @import 'components/advantages';
 @import 'components/services';
 @import 'components/consultation';
+@import 'components/about';
+@import 'components/cases';
+@import 'components/reviews';
+@import 'components/questions';
 @import 'components/footer';
 
 // ==== COMPONENTS PAGE ==== \\
