@@ -1,0 +1,145 @@
+.footer {
+  background-color:  $blue-900;
+  color: $white;
+}
+
+.footer__top {
+  padding: 70px 0 90px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__list > * {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__link {
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
+  &:focus {
+    color: $orange;
+  }
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    color: rgba($orange, 0.7);
+  }
+}
+
+.footer__nav > * {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__contacts > * {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+
+  &:focus {
+    .footer__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:hover {
+    .footer__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:active {
+    .footer__phone-number {
+      opacity: 0.5;
+    }
+  }
+}
+
+.footer__phone-number {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  color: $white;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s opacity;
+}
+
+.footer__phone-icon {
+  width: 23px;
+  height: 22px;
+  fill: currentColor;
+
+  position: absolute;
+  top: 0;
+  left: -34px;
+}
+
+.footer__phone-text {
+  font-size: 15px;
+  color: $orange;
+  border-bottom: 1px solid $orange;
+}
+
+.footer__address {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 17px;
+    height: 22px;
+    background-image: url(../img/location.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.footer__time {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/time.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.footer__bottom {
+  background-color: $white;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.footer__inner > * {
+  font-size: 13px;
+  color: #3F3F3F;
+  border-bottom: 1px solid #3F3F3F;
+}
+
