@@ -1,0 +1,51 @@
+.btnToTop {
+  position: fixed;
+  @include adaptive-value('right', 50, 25, 1);
+  @include adaptive-value('bottom', 50, 25, 1);
+
+  @include adaptive-value('width', 74, 44, 1);
+  @include adaptive-value('height', 74, 44, 1);
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid $black-900;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s, opacity 0.3s;
+
+  &:focus {
+    box-shadow: 0 0 5px 10px rgba($purple, 0.5);
+  }
+  &:hover {
+    background-color: $purple;
+
+    .btnToTop__icon {
+      fill: $white;
+    }
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.btnToTop__icon {
+  height: 16px;
+  width: 100%;
+  fill: $black-900;
+
+  transition: fill 0.3s;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}

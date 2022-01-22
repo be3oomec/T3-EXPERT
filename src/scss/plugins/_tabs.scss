@@ -1,0 +1,253 @@
+.tabs {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptive-value('margin-bottom', 80, 40, 1);
+    list-style: none;
+    counter-reset: my-counter;
+
+    @include _768 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    max-width: 262px;
+    width: 100%;
+
+    &:not(:last-child) {
+      @include adaptive-value('margin-right', 35, 5, 1);
+    }
+
+    @include _768 {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    color: #2F8FFF;
+    @include adaptive-value('padding-top', 25, 10, 1);
+    @include adaptive-value('padding-bottom', 25, 10, 1);
+    @include adaptive-value('padding-left', 50, 10, 1);
+    @include adaptive-value('padding-right', 50, 10, 1);
+    background-color: #F2F5F9;
+    border-radius: 40px;
+    text-transform: uppercase;
+    border: 1px solid $white;
+    cursor: pointer;
+    counter-increment: my-counter;
+    transition: background-color 0.3s, border 0.4s;
+
+    &:focus {
+      background-color: #75b5ff;
+      border: 1px solid #75b5ff;
+      color: $white;
+    }
+
+    &:hover {
+      border: 1px solid #2F8FFF;
+    }
+
+    &::before {
+      content: counter(my-counter) ".";
+    }
+
+    &--active {
+      background-color: #2F8FFF;
+      border: 1px solid #2F8FFF;
+      color: $white;
+    }
+
+    @include _576 {
+      width: 100%;
+    }
+  }
+
+  // =========================================
+
+  &__item {
+    display: none;
+    margin: 0 -35px;
+
+    &--active {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+  }
+
+  &__info {
+    flex: 0 1 50%;
+
+    @include _1200 {
+      flex: 0 1 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    flex: 0 1 50%;
+    min-width: 0;
+
+    @include _1200 {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__slides {
+    box-shadow: -20px 30px 5px rgba(241, 246, 254, 1);
+    position: relative;
+
+    .swiper-n,
+    .swiper-p {
+      position: absolute;
+      bottom: 10%;
+      right: 100px;
+      background-color: $white;
+      border-radius: 50px;
+      padding: 15px 25px;
+      box-shadow: 0px 2px 14px rgba(61, 70, 118, 0.14);
+      transition: opacity 0.4s;
+      z-index: 10;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include _576 {
+        display: none;
+      }
+    }
+
+    .swiper-p {
+      right: 320px;
+    }
+
+    .swiper-icon {
+      width: 33px;
+      height: 17px;
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      bottom: 43px;
+      right: 200px;
+      left: auto;
+      background-color: $white;
+      border-radius: 50px;
+      padding: 15px 25px;
+      box-shadow: 0px 2px 14px rgba(61, 70, 118, 0.14);
+      transition: 0.3s opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+      color: $text;
+      width: 100px;
+
+      @include _576 {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    @include _1200 {
+      width: 100%;
+    }
+  }
+
+  &__slides-mini {
+    height: 160px;
+  }
+
+  &__image-mini {
+    opacity: 0.2;
+    position: relative;
+    padding-bottom: 5%;
+    margin-right: 10px;
+
+    &.swiper-slide-thumb-active {
+      opacity: 0.8;
+    }
+  }
+
+  &__img-mini {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // ===================================
+
+  &__info {
+    text-align: left;
+    max-width: 510px;
+    padding: 0 35px;
+
+    @include _1200 {
+      max-width: 80%;
+    }
+
+    @include _768 {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  &__text p {
+    margin-bottom: 20px;
+  }
+
+  &__include p {
+    margin-bottom: 20px;
+  }
+
+  &__block-list {
+    display: flex;
+    align-items: center;
+
+    @include _576 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__include-list {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__include-item {
+    padding-left: 30px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/svg/check.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}

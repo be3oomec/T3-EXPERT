@@ -1,0 +1,16 @@
+// базовые подключения
+@import "vars";
+@import "libs";
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// ==== MAIN COMPONENTS === \\
+@import 'components/header';
+@import 'components/hero';
+@import 'components/footer';
+
+// ==== COMPONENTS PAGE ==== \\
+
+

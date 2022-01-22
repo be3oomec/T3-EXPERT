@@ -1,0 +1,149 @@
+.modal {
+  --transition-time: 0.3s;
+  background-color: rgba(#000, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+.modal::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.modal__container {
+  position: relative;
+  width: 30vw;
+  margin: 50px auto;
+  display: none;
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: default;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 0;
+}
+
+.modal__close:hover {
+  .modal__icon {
+    fill: rgb(160, 57, 57);
+  }
+}
+
+.modal__icon {
+  width: 25px;
+  height: 25px;
+  transition: fill 0.4s;
+}
+
+.modal__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal__content {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.modal__block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.modal__label {
+  margin-bottom: 10px;
+}
+
+.modal__input--name {
+  margin-bottom: 10px;
+}
+
+.modal__btn {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 5px 25px;
+  transition: all 0.3s;
+}
+
+.modal__btn:hover {
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+  display: inline-block;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+  transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+*:focus {
+  outline: 1px #000 solid;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

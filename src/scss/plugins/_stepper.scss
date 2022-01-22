@@ -1,0 +1,66 @@
+.stepper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 35px;
+  user-select: none;
+}
+
+.stepper__field {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $gray-300;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding-left: 8px;
+}
+
+.stepper__input {
+  border: none;
+  width: 10px;
+  height: 100%;
+  outline: none;
+  font-weight: 400;
+  font-size: 12px;
+  min-width: 2ex;
+}
+
+.stepper__text {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.stepper__btns {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid $gray-300;
+  width: 25%;
+  height: calc(100% - 2px);
+  transform: translateY(-50%);
+}
+
+.stepper__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  height: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.stepper__btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.stepper__icon {
+  width: 7px;
+  height: 5px;
+}
