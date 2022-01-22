@@ -1,0 +1,57 @@
+.consultation {
+  background-color: #F1F3F5;
+  padding: 90px 0;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .consultation__inner {}
+
+.consultation__title {
+  max-width: 840px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.consultation__form {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.consultation__input {
+  background-color: $white;
+  box-shadow: 0px 5px 14px #E4E4E4;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  color: rgba(57, 57, 57, 0.8);
+  padding: 16px;
+  max-width: 260px;
+  width: 100%;
+}
+
+.consultation__button {
+   &:focus {
+     box-shadow: 0px 0px 0px 3px rgba($black, 0.5);
+   }
+
+   &:hover {
+     color: $blue-900;
+     background-color: transparent;
+     border: 1px solid rgba($blue-900, 0.9);
+   }
+
+   &:active {
+     color: rgba($blue-900, 0.5);
+     box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
+   }
+}
+
+.consultation__text {
+  font-size: 14px;
+  color: rgba(57, 57, 57, 0.8);
+}
