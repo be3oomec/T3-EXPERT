@@ -82,14 +82,14 @@ body.lock {
   }
 
   &:hover {
-    color: $black;
+    color: $white;
     background-color: transparent;
     border: 1px solid rgba($white, 0.9);
   }
 
   &:active {
-    color: rgba($black, 0.5);
-    box-shadow: inset 0px 4px 4px rgba($black, 0.25);
+    color: rgba($white, 0.5);
+    box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
   }
 
   &--clear {
