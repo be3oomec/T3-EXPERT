@@ -1,6 +1,7 @@
 .questions {
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
+  background-size: cover;
   background-color: #F1F3F5;
   padding: 130px 0;
   text-align: center;
@@ -24,7 +25,12 @@
   margin-bottom: 25px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+}
+
+.questions__form > * {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
 .questions__input {
@@ -43,13 +49,13 @@
    }
 
    &:hover {
-     color: $blue-900;
+     color: $white;
      background-color: transparent;
-     border: 1px solid rgba($blue-900, 0.9);
+     border: 1px solid rgba($white, 0.9);
    }
 
    &:active {
-     color: rgba($blue-900, 0.5);
+     color: rgba($white, 0.5);
      box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
    }
 }

@@ -53,6 +53,10 @@
   }
 }
 
+.reviews__btn:disabled {
+  opacity: 0.5;
+}
+
 .reviews__icon {
   width: 42px;
   height: 42px;

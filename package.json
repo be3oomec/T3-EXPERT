@@ -45,6 +45,7 @@
     "sass": "^1.38.2"
   },
   "dependencies": {
+    "graph-tabs": "^1.0.2",
     "imask": "^6.2.2",
     "simplebar": "^5.3.6",
     "swiper": "^7.0.8"
