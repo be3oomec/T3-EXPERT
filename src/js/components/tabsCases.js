@@ -3,5 +3,3 @@ const tabs1 = new GraphTabs('tab', {
     console.log(tabs);
   }
 });
-
-tabs1.switchTabs(document.querySelector('#tab5'));
