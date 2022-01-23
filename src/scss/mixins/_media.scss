@@ -1,4 +1,10 @@
 // ============ МЕДИА ЗАПРОСЫ =========== \\
+@mixin _1440 {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
 @mixin _1200 {
   @media only screen and (max-width: 1200px) {
     @content;

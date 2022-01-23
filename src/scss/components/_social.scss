@@ -6,12 +6,27 @@
   top: 50%;
   transform: translateY(-50%);
   left: 5rem;
+
+  @include _1440 {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    flex-direction: row;
+    margin-top: 30px;
+  }
 }
 
 .social__item {
   &:not(:last-child) {
-    // margin-right: 20px;
     margin-bottom: 20px;
+  }
+
+  @include _1440 {
+   &:not(:last-child) {
+     margin-right: 20px;
+     margin-bottom: 0;
+   }
   }
 }
 

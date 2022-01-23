@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+.reviews__list {
+  @include _768 {
+    margin-bottom: 60px;
+  }
+}
+
 .reviews__title {
   margin-bottom: 50px;
   margin-right: 35px;
@@ -51,6 +57,10 @@
       margin-right: 15px;
     }
   }
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .reviews__btn:disabled {
@@ -60,4 +70,34 @@
 .reviews__icon {
   width: 42px;
   height: 42px;
+}
+
+
+.reviews__pagination {
+  display: none;
+
+  @include _768 {
+    display: block;
+
+
+    .swiper-pagination-bullet {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      width: 7px;
+      height: 7px;
+      background-color: #616161;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 13px;
+      height: 13px;
+      background-color: #2364c4;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -9,20 +9,25 @@
   padding: 60px 50px;
 
   transform: translateY(-40px);
+
+  @include _992 {
+    transform: translateY(0px);
+    margin: 0 -15px;
+  }
 }
 
 .advantages__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   justify-content: center;
   justify-items: center;
-  grid-gap: calc($gap * 2);
+  gap: calc($gap * 2);
 }
 
 .advantages__item {
   text-align: center;
 
-  max-width: 260px;
+  max-width: 240px;
   width: 100%;
 
   display: flex;
@@ -43,6 +48,12 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+  }
+
+  @include _1200 {
+    &::after {
+      display: none;
     }
   }
 }

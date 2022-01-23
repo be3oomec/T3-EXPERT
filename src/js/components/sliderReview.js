@@ -11,6 +11,12 @@ const swiper = new Swiper('.reviews__slider', {
     prevEl: '.swiper-btn-prev',
   },
 
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+
   breakpoints: {
     0: {
       slidesPerView: 1,

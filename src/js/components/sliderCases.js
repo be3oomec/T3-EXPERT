@@ -3,6 +3,11 @@ const swiperOne = new Swiper('.tabs-swiper-one', {
   slidesPerView: 1,
   grabCursor: true,
 
+  pagination: {
+    el: '.swiper-one-pagination',
+    type: 'bullets',
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-one-b-next',
@@ -14,6 +19,11 @@ const swiperTwo = new Swiper('.tabs-swiper-two', {
   // option
   slidesPerView: 1,
   grabCursor: true,
+
+  pagination: {
+    el: '.swiper-two-pagination',
+    type: 'bullets',
+  },
 
   // Navigation arrows
   navigation: {
@@ -28,6 +38,11 @@ const swiperThree = new Swiper('.tabs-swiper-three', {
   slidesPerView: 1,
   grabCursor: true,
 
+  pagination: {
+    el: '.swiper-three-pagination',
+    type: 'bullets',
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-three-b-next',
@@ -41,6 +56,11 @@ const swiperFour = new Swiper('.tabs-swiper-four', {
   slidesPerView: 1,
   grabCursor: true,
 
+  pagination: {
+    el: '.swiper-four-pagination',
+    type: 'bullets',
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-four-b-next',
@@ -53,6 +73,11 @@ const swiperFive = new Swiper('.tabs-swiper-five', {
   // option
   slidesPerView: 1,
   grabCursor: true,
+
+  pagination: {
+    el: '.swiper-five-pagination',
+    type: 'bullets',
+  },
 
   // Navigation arrows
   navigation: {

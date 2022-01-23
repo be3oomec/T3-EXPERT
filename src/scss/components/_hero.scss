@@ -3,16 +3,14 @@
   background-position: center;
   background-size: cover;
 
-  height: calc(100vh - 174px);
-
-  display: flex;
-  align-items: center;
+  height: calc(100% - 174px);
 }
 
 .hero__inner {
   max-width: 650px;
   width: 100%;
-  margin: 0 auto 0 0;
+  @include adaptive-value('padding-top', 145, 40, 1);
+  @include adaptive-value('padding-bottom', 145, 30, 1);
 }
 
 .hero__title {
@@ -55,10 +53,22 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .hero__button {
   &:not(:last-child) {
     margin-right: 20px;
+  }
+  @include _576 {
+    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  @include _320 {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }
