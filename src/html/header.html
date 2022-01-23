@@ -1,5 +1,4 @@
 <header class="header" id="header">
-
   <h1 class="sr-only">Эксперт - консалтинговая компания</h1>
 
   <nav class="header__menu">
@@ -7,23 +6,29 @@
       <div class="container">
         <div class="header__inner">
           <a class="logo" href="/">
-            <img src="img/logo.svg" alt="Логотип сайта" width="204" height="48" />
+            <img
+              src="img/logo.svg"
+              alt="Логотип сайта"
+              width="204"
+              height="48"
+            />
           </a>
 
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link" href="#">О компании</a>
+              <a class="header__link" data-goto="#cases" href="#">О компании</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Выиграннные дела</a>
+              <a class="header__link" data-goto="#cases" href="#">Выиграннные дела</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Контакты</a>
+              <a class="header__link" data-goto="#footer" href="#">Контакты</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+
     <div class="header__bottom">
       <div class="container">
         <div class="header__inner">
@@ -52,6 +57,102 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <div class="header__megamenu megamenu">
+      <form class="megamenu__form" action="#">
+        <label class="megamenu__label">
+          <input class="megamenu__input" type="search" name="search" id="search" placeholder="Что ищем?">
+        </label>
+      </form>
+      <ul class="megamenu__row">
+        <li class="megamenu__col">
+          <h2 class="megamenu__heading">Юридические услуги</h2>
+          <ul class="megamenu__list">
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Защита прав потребителей
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Возврат некачественного автомобиля
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#"> Споры с застройщиком </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Оспаривание кадастровой стоимости
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="megamenu__col">
+          <h2 class="megamenu__heading">Независимая оценка</h2>
+          <ul class="megamenu__list">
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#"> Оценка недвижимости </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Оценка земельных участков
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Независимая оценка имущества
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Определение стоимости восстановительного ремонта ТС
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="megamenu__col">
+          <h2 class="megamenu__heading">Экспертиза</h2>
+          <ul class="megamenu__list">
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Экспертиза качества товара
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Пожаро-техническая экспертиза
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Строительно-техническая экспертиза
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Землеустроительная экспертиза
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Исследование почерка и подписей
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Экспертиза лакокрасочных покрытий
+              </a>
+            </li>
+            <li class="megamenu__item">
+              <a class="megamenu__link" href="#">
+                Экспертиза обстоятельств ДТП
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>

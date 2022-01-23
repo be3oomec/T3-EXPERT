@@ -2,7 +2,7 @@
 // ========== FIXED MENU ========= \\
 // =============================== \\
 
-const header = document.querySelector('.header');
+const header = document.querySelector('.header__bottom');
 const hero = document.querySelector('.hero');
 const headerHeight = header.offsetHeight;
 const heroHeight = hero.offsetHeight;
