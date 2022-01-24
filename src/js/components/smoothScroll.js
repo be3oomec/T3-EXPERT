@@ -3,7 +3,7 @@
 // == a add data-goto="selector" == \\
 // ================================ \\
 
-const menuLinks = document.querySelectorAll('.header__link[data-goto]');
+const menuLinks = document.querySelectorAll('a[data-goto]');
 
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLinks => {
