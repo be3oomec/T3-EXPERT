@@ -5,3 +5,16 @@
 .cases__title {
   margin-bottom: 30px;
 }
+
+.cases__select {
+  display: none;
+
+  @include _768 {
+    display: block;
+    margin-bottom: 90px;
+  }
+
+  @include _576 {
+    margin-bottom: 35px;
+  }
+}

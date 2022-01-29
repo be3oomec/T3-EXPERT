@@ -31,9 +31,12 @@
   background-color: $white;
   box-shadow: 0px 5px 14px #e4e4e4;
   border-radius: 2px;
-  line-height: 0;
+  padding: 13px;
 
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color;
 
   &:focus {

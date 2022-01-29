@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 50px;
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .tabs__nav-item {
@@ -50,6 +54,10 @@
   color: $white;
   background-color: #2364c4;
   box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
+}
+
+.tabs__panel {
+  padding: 0 10px;
 }
 
 .tabs__panel-wrap {
@@ -179,5 +187,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.hidden {
+  @include _768 {
+    display: none;
   }
 }
