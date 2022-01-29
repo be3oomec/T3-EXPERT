@@ -20,90 +20,6 @@
       top: 0;
     }
   }
-
-  .header__megamenu.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: $blue-900;
-    z-index: 101 !important;
-
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform: translateY(0%);
-    transition: all 0.3s;
-    padding: 200px 50px 100px 50px;
-    display: flex;
-  }
-}
-
-.burger {
-  display: block;
-  height: 20px;
-  width: 30px;
-  margin: 10px;
-  z-index: 102;
-  cursor: pointer;
-  position: relative;
-  &.burger-active {
-    position: absolute;
-    top: 7vh;
-    left: 5vw;
-    &:before {
-      background-color: $white;
-      transform: rotate(45deg);
-      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-      top: 8px;
-    }
-    &:after {
-      background-color: $white;
-      transform: rotate(-45deg);
-      bottom: 10px;
-      transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-    }
-    & span {
-      transform: scale(0);
-    }
-  }
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: $black;
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-  }
-
-  &:before {
-    top: 0;
-    left: 0;
-  }
-  &::after {
-    bottom: 0;
-    left: 0;
-  }
-  span {
-    position: absolute;
-    top: 9px;
-    right: 0;
-    width: 100%;
-    background-color: $black;
-    height: 2px;
-    transform: scale(1);
-    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
-  }
-
-  .header__megamenu {
-    position: absolute;
-    transform: translateY(-200%);
-  }
 }
 
 .header__top {
@@ -113,20 +29,6 @@
   @include _768 {
     display: none;
   }
-}
-
-.header__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .header__item {
@@ -154,13 +56,15 @@
 .header__bottom {
   background-color: $white;
   box-shadow: 0px 5px 14px #e4e4e4;
-  padding: 25px 0;
+  padding: 25px 0 23px 0;
 }
 
 .header__bottom-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  transform: translateX(-138px);
+
+  @include _1200 {
+    transform: translateX(0);
+  }
 }
 
 .header__bottom-item {
@@ -197,9 +101,6 @@
 }
 
 .header__phone {
-  display: flex;
-  flex-direction: column;
-
   position: relative;
 
   &:focus {
@@ -244,4 +145,120 @@
   font-size: 15px;
   color: $orange;
   border-bottom: 1px solid $orange;
+}
+
+
+// <-- BURGER / MENU BUTTON CLOSE -->
+
+.burger {
+  display: block;
+  height: 20px;
+  width: 30px;
+  z-index: 100;
+  cursor: pointer;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $black;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 100%;
+    background-color: $black;
+    height: 2px;
+    transform: scale(1);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+
+  .header__megamenu {
+    position: absolute;
+    transform: translateY(-200%);
+  }
+}
+
+.button-close {
+  display: block;
+  height: 30px;
+  width: 30px;
+  z-index: 100;
+
+  position: absolute;
+  top: 40px;
+  right: 50px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $black;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+
+  &:before {
+    background-color: $white;
+    transform: rotate(45deg);
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    top: 50%;
+    left: 0;
+  }
+
+  &:after {
+    background-color: $white;
+    transform: rotate(-45deg);
+    bottom: 45%;
+    left: -1px;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+  }
+
+  @include _576 {
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.header__megamenu.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+
+  background-color: $blue-900;
+  z-index: 101 !important;
+  box-shadow: 0 0 0 10000px rgba(#000, 0.8);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 50px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s;
+
+  @include __768 {
+    width: 100%;
+  }
 }

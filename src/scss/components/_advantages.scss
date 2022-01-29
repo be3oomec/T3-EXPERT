@@ -1,5 +1,5 @@
 .advantages {
-  @include adaptive-value('margin-bottom', 130, 40, 1);
+  @include adaptive-value('margin-bottom', 90, 40, 1);
 }
 
 .advantages__inner {
@@ -10,17 +10,13 @@
 
   transform: translateY(-40px);
 
-  @include _992 {
+  @include _1200 {
     transform: translateY(0px);
     margin: 0 -15px;
   }
 }
 
 .advantages__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  justify-content: center;
-  justify-items: center;
   gap: calc($gap * 2);
 }
 
@@ -30,9 +26,6 @@
   max-width: 240px;
   width: 100%;
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   position: relative;
 
   &:not(:last-child) {
@@ -59,9 +52,9 @@
 }
 
 .advantages__img {
-  max-width: 70px;
+  max-width: 62px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .advantages__img img {
   display: block;

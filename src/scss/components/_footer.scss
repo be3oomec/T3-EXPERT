@@ -4,11 +4,7 @@
 }
 
 .footer__top {
-  padding: 70px 0 90px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  justify-items: center;
-  grid-gap: 40px;
+  padding: 60px 0 92px 0;
 
   @include _992 {
     .logo {
@@ -25,7 +21,7 @@
 
 .footer__list > * {
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -48,7 +44,7 @@
   }
 }
 
-.footer__nav > * {
+.footer__nav-list > * {
   &:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -61,7 +57,7 @@
 }
 
 .footer__contacts > * {
-  max-width: 225px;
+  max-width: 350px;
   width: 100%;
   padding-left: 40px;
   &:not(:last-child) {
@@ -157,16 +153,14 @@
 }
 
 .footer__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   padding: 18px 0;
 }
 
 .footer__inner > * {
   font-size: 13px;
   color: #3F3F3F;
-  border-bottom: 1px solid #3F3F3F;
+  &:not(:first-child) {
+    border-bottom: 1px solid #3F3F3F;
+  }
 }
 

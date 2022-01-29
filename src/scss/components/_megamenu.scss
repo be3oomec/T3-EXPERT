@@ -1,22 +1,29 @@
 .megamenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   display: none;
+}
+
+.megamenu__inner {
+  max-width: 1220px;
+  margin: auto;
 }
 
 .megamenu__form {
   max-width: 850px;
-  width: 100%;
+
   margin-bottom: 90px;
   position: relative;
   &:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
   }
 
   @include _768 {
@@ -24,12 +31,15 @@
   }
 }
 
+.megamenu__label {
+  width: 100%;
+}
+
 .megamenu__input {
   font-size: 25px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba($white, 0.5);
-  max-width: 850px;
   width: 100%;
   padding: 25px;
   padding-left: 60px;
@@ -43,6 +53,9 @@
   @include adaptive-value("margin-left", -75, 0, 1);
   @include adaptive-value("margin-right", -75, 0, 1);
 
+  @include _768 {
+    margin-bottom: 150px;
+  }
 }
 
 .megamenu__col {
@@ -66,12 +79,14 @@
 
 .megamenu__heading {
   font-weight: 500;
-  @include adaptive-value('font-size', 28, 20, 1);
+  @include adaptive-value("font-size", 28, 20, 1);
   color: $white;
   margin-bottom: 50px;
 
-  @include _768 {
-    margin-bottom: 20px;
+  @include _576 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 }
 
@@ -80,7 +95,7 @@
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     will-change: max-height;
     transition: all 0.3s ease-out;
   }
@@ -108,6 +123,23 @@
   &:active {
     opacity: 0.7;
   }
+}
+
+.megamenu__contacts {
+  font-weight: 500;
+  font-size: 28px;
+
+  @include __768 {
+    display: none;
+  }
+
+  @include _576 {
+    font-size: 17px;
+  }
+}
+
+.megamenu__contacts > * {
+  margin-bottom: 35px !important;
 }
 
 .open .megamenu__list {

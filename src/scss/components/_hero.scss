@@ -1,9 +1,14 @@
 .hero {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right center;
   background-size: cover;
 
-  height: calc(100% - 174px);
+  max-height: 659px;
+
+  @include _768 {
+    background-image: none !important;
+    background-color: $blue-900;
+  }
 }
 
 .hero__inner {
@@ -14,32 +19,37 @@
 }
 
 .hero__title {
+  font-family: $noto;
   color: $white;
   margin-bottom: 40px;
+
+  @include _576 {
+    text-align: center;
+  }
 }
 
-.hero__title span {
+.hero__title strong {
   color: $orange;
 }
 
 .hero__list {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .hero__item {
   font-size: 18px;
-  padding-left: 40px;
+  padding-left: 36px;
   color: $white;
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   &:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -4px;
     width: 26px;
     height: 26px;
     background-image: url(../img/check.svg);
@@ -50,25 +60,14 @@
 }
 
 .hero__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: 20px;
   margin-bottom: 60px;
 }
 
-.hero__link {
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-  @include _576 {
-    margin-bottom: 20px;
-    &:not(:last-child) {
-      margin-right: 5px;
-    }
-  }
-  @include _320 {
-    &:not(:last-child) {
-      margin-right: 0;
-    }
-  }
+.hero__social {
+   display: none !important;
+
+   @include _768 {
+     display: flex !important;
+   }
 }

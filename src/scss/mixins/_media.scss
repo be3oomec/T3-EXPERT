@@ -1,4 +1,10 @@
 // ============ МЕДИА ЗАПРОСЫ =========== \\
+@mixin _1600 {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin _1440 {
   @media only screen and (max-width: 1440px) {
     @content;
@@ -6,25 +12,25 @@
 }
 
 @mixin _1200 {
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1199.98px) {
     @content;
   }
 }
 
 @mixin _992 {
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 991.98px) {
     @content;
   }
 }
 
 @mixin _768 {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767.98px) {
     @content;
   }
 }
 
 @mixin _576 {
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 575.98px) {
     @content;
   }
 }
@@ -42,32 +48,32 @@
 }
 // ============ МЕДИА ЗАПРОСЫ =========== \\
 
-// @mixin _1200m {
-//   @media only screen and (min-width: 1200px) {
-//     @content;
-//   }
-// }
+@mixin __1200 {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
 
-// @mixin _992m {
-//   @media only screen and (min-width: 992px) {
-//     @content;
-//   }
-// }
+@mixin __992 {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
 
-// @mixin _768m {
-//   @media only screen and (min-width: 768px) {
-//     @content;
-//   }
-// }
+@mixin __768 {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
 
-// @mixin _576m {
-//   @media only screen and (min-width: 576px) {
-//     @content;
-//   }
-// }
+@mixin __576 {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
 
-// @mixin _320m {
-//   @media only screen and (min-width: 320px) {
-//     @content;
-//   }
-// }
+@mixin __320 {
+  @media only screen and (min-width: 320px) {
+    @content;
+  }
+}
