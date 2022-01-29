@@ -8,6 +8,17 @@
 
 .cases__select {
   display: none;
+  float: none;
+  box-shadow: 0px 5px 14px #E4E4E4;
+  background-color: #FFFFFF;
+  border-radius: 106px;
+
+  font-weight: 500;
+  font-size: 18px;
+  color: #616161;
+  min-height: 61px;
+  line-height: 60px;
+  padding-left: 25px;
 
   @include _768 {
     display: block;
@@ -17,4 +28,11 @@
   @include _576 {
     margin-bottom: 35px;
   }
+}
+
+.nice-select:after {
+  height: 17px;
+  margin-top: -12px;
+  right: 27px;
+  width: 17px;
 }

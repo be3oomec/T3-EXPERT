@@ -1,3 +1,4 @@
+
 const btnClose = document.querySelector('.button-close');
 const megaMenu = document.querySelector('.header__megamenu');
 
@@ -7,3 +8,7 @@ if (btnClose) {
     document.body.classList.remove('lock');
   })
 }
+
+// -----------------------------------------------
+
+NiceSelect.bind(document.getElementById("selCases"));
