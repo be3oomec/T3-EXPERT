@@ -190,6 +190,10 @@
   }
 }
 
+.tabs__panel-wrap--offset {
+  margin-bottom: 150px;
+}
+
 .hidden {
   @include _768 {
     display: none;

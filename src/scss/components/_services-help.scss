@@ -1,0 +1,43 @@
+.services-help {
+  margin-bottom: 132px;
+  padding: 90px 0 109px 0;
+  background-color: #F1F3F5;
+}
+
+// .services-help__inner {}
+
+.services-help__title {
+  font-family: $bitter;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.4;
+  color: #061428;
+  margin-bottom: 69px;
+}
+
+.services-help__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-gap: 20px;
+
+  @include _576 {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+// .services-help__item {}
+
+.services-help__link {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.4;
+  color: #061428;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 14px #E4E4E4;
+  border-radius: 4px;
+  padding: 43px;
+}

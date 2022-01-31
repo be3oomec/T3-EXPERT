@@ -1,0 +1,45 @@
+.company {
+  margin-bottom: 131px;
+}
+
+.company__wrap {
+  margin: 0 -10px;
+}
+
+.company__inner {
+  position: relative;
+}
+
+.company__img {
+  max-width: 630px;
+  padding: 0 10px;
+}
+
+.company__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.company__btn {
+  width: 42px;
+  height: 42px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.company__btn--prev {
+  right: -95px;
+}
+
+.company__btn--next {
+  left: -95px;
+}
+
+.company__btn-icon {
+  width: 42px;
+  height: 42px;
+  fill: $blue-900;
+}

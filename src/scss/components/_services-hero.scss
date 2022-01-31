@@ -1,0 +1,52 @@
+.hero-services {
+  padding: 49px 0 137px 0;
+}
+
+.hero-services__inner {
+  max-width: 650px;
+}
+
+.hero-services__title {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 45px;
+}
+
+.hero-services__title strong {
+  font-family: $noto;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.4;
+  color: #FFA620;
+}
+
+.hero-services__list {
+  margin-bottom: 60px;
+}
+
+.hero-services__item {
+  font-size: 18px;
+  padding-left: 36px;
+  color: $white;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -4px;
+    width: 26px;
+    height: 26px;
+    background-image: url(../img/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// .hero-services__buttons {}
+
+// .hero-services__link {}

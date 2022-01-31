@@ -1,0 +1,66 @@
+.services-stages {
+  margin-bottom: 155px;
+}
+
+// .services-stages__inner {}
+
+.services-stages__title {
+  margin-bottom: 69px;
+}
+
+.services-stages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  column-gap: 20px;
+  row-gap: 40px;
+
+  list-style: none;
+  counter-reset: section;
+}
+
+.services-stages__item {
+  background: #FFFFFF;
+  box-shadow: 0px 5px 14px #E4E4E4;
+  border-radius: 4px;
+  padding: 71px 96px 71px 42px;
+  counter-increment: section;
+
+  position: relative;
+  &:before {
+    content: counter(section);
+    background: #E29623;
+    border-radius: 2px;
+    font-family: $bitter;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: -20px;
+    left: 42px;
+  }
+}
+
+.services-stages__heading {
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.4;
+  color: #061428;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.services-stages__text {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(57, 57, 57, 0.8);
+  max-width: 500px;
+}

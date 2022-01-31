@@ -1,12 +1,12 @@
 .reviews {
   background-color: #f1f3f5;
   padding: 60px 0;
-  position: relative;
 }
 
 .reviews__top {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .reviews__list {
@@ -40,15 +40,14 @@
 
 .reviews__btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 350%;
   z-index: 5;
 
   &--prev {
-    left: 5rem;
+    left: -85px;
   }
   &--next {
-    right: 5rem;
+    right: -85px;
   }
 
   @include _1200 {

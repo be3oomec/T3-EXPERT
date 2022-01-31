@@ -1,0 +1,36 @@
+.about-advantages {
+  margin-bottom: 117px;
+}
+
+.about-advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 20px;
+}
+
+.about-advantages__item {
+  background: #FFFFFF;
+  box-shadow: 0px -5px 52px rgba(0, 0, 0, 0.09);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 34px 85px 56px;
+}
+
+.about-advantages__number {
+  font-family: $noto;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 1.4;
+  color: #061428;
+}
+
+.about-advantages__descr {
+  font-family: $roboto;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #061428;
+}

@@ -2,19 +2,19 @@
 // ========== FIXED MENU ========= \\
 // =============================== \\
 
-const header = document.querySelector('.header__bottom');
-const hero = document.querySelector('.hero');
+const header = document.querySelector(".header__bottom");
+const hero = document.querySelector("#hero");
 const headerHeight = header.offsetHeight;
 const heroHeight = hero.offsetHeight;
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   let scrollDistance = window.scrollY;
 
   if (scrollDistance >= heroHeight + headerHeight) {
-    header.classList.add('header--fixed');
+    header.classList.add("header--fixed");
     hero.style.marginTop = `${headerHeight}px`;
   } else {
-    header.classList.remove('header--fixed');
+    header.classList.remove("header--fixed");
     hero.style.marginTop = null;
   }
 });
