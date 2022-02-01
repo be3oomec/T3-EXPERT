@@ -24,10 +24,14 @@
   &--contacts {
     color: rgba(57, 57, 57, 0.8);
 
+    .breadcrumbs__link {
+      color: rgba(57, 57, 57, 0.8);
+    }
+
     .breadcrumbs__item {
       &:not(:last-child) {
         &:after {
-          color: rgba(57, 57, 57, 0.8);
+          color: rgba(57, 57, 57, 0.8) !important;
         }
       }
     }
