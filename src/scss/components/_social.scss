@@ -20,16 +20,15 @@
   }
 
   @include _1600 {
-   &:not(:last-child) {
-     margin-right: 20px;
-     margin-bottom: 0;
-   }
+    &:not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
   }
 }
 
 .social__link {
   background-color: $white;
-  box-shadow: 0px 5px 14px #e4e4e4;
   border-radius: 2px;
   padding: 13px;
 
@@ -40,19 +39,16 @@
   transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color;
 
   &:focus {
-    background-color: $blue-900;
     .social__icon {
-      fill: $white;
+      fill: $orange;
     }
   }
   &:hover {
-    background-color: $blue-900;
     .social__icon {
-      fill: $white;
+      fill: $orange;
     }
   }
   &:active {
-    background-color: $blue-900;
     .social__icon {
       fill: $orange;
     }

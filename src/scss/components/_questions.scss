@@ -2,9 +2,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #F1F3F5;
-  @include adaptive-value('padding-top', 132, 45, 1);
-  @include adaptive-value('padding-bottom', 130, 45, 1);
+  background-color: #f1f3f5;
+  @include adaptive-value("padding-top", 132, 45, 1);
+  @include adaptive-value("padding-bottom", 130, 45, 1);
 }
 
 .questions__title {
@@ -29,25 +29,29 @@
   color: rgba(57, 57, 57, 0.8);
   padding: 12px 13px;
   min-width: 260px;
+
+  &:focus {
+    outline: 1px solid $orange;
+  }
 }
 
 .questions__button {
   min-width: 260px;
   min-height: 50px;
-   &:focus {
-     box-shadow: 0px 0px 0px 3px rgba($black, 0.5);
-   }
+  &:focus {
+    box-shadow: 0px 0px 0px 3px rgba($black, 0.5);
+  }
 
-   &:hover {
-     color: $white;
-     background-color: transparent;
-     border: 1px solid rgba($white, 0.9);
-   }
+  &:hover {
+    color: $white;
+    background-color: #CD8A26;
+    border: 1px solid rgba($orange, 0.9);
+  }
 
-   &:active {
-     color: rgba($white, 0.5);
-     box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
-   }
+  &:active {
+    color: rgba($white, 0.5);
+    box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
+  }
 }
 
 .questions__text {

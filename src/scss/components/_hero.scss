@@ -14,8 +14,8 @@
 .hero__inner {
   max-width: 650px;
   width: 100%;
-  @include adaptive-value('padding-top', 145, 40, 1);
-  @include adaptive-value('padding-bottom', 145, 30, 1);
+  @include adaptive-value("padding-top", 145, 40, 1);
+  @include adaptive-value("padding-bottom", 145, 30, 1);
 }
 
 .hero__title {
@@ -65,9 +65,13 @@
 }
 
 .hero__social {
-   display: none !important;
+  display: none !important;
 
-   @include _768 {
-     display: flex !important;
-   }
+  @include _768 {
+    display: flex !important;
+  }
+
+  @include _576 {
+    display: none !important;
+  }
 }

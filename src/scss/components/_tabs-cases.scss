@@ -135,10 +135,10 @@
   z-index: 5;
 
   &--next {
-    right: -4rem;
+    right: -85px;
   }
   &--prev {
-    left: -4rem;
+    left: -85px;
   }
 
   @include _1200 {

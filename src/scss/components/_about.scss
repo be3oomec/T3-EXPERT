@@ -35,13 +35,13 @@
   }
 
   &:hover {
-    color: $black;
-    background-color: transparent;
-    border: 1px solid rgba($black, 0.9);
+    color: $white;
+    background-color: #CD8A26;
+    border: 1px solid rgba($orange, 0.9);
   }
 
   &:active {
-    color: rgba($black, 0.5);
+    color: rgba($white, 0.5);
     box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
   }
 }

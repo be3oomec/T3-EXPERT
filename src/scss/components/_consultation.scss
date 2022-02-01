@@ -30,6 +30,14 @@
   max-width: 260px;
   width: 100%;
 
+  &:focus {
+    border: 1px solid #E29623;
+  }
+  &:focus-visible {
+    border: 1px solid #E29623;
+    outline: 1px solid #E29623;
+  }
+
   @include _320 {
     max-width: 100%;
   }
@@ -39,17 +47,17 @@
   min-height: 50px;
 
   &:focus {
+    color: $white;
     box-shadow: 0px 0px 0px 3px rgba($black, 0.5);
   }
 
   &:hover {
-    color: $blue-900;
-    background-color: transparent;
-    border: 1px solid rgba($blue-900, 0.9);
+    color: $white;
+    background-color: #CD8A26;
   }
 
   &:active {
-    color: rgba($blue-900, 0.5);
+    color: rgba($white, 0.5);
     box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
   }
 }

@@ -17,11 +17,19 @@
 }
 
 .advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 20px;
+  justify-items: center;
   gap: calc($gap * 2);
 }
 
 .advantages__item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
   max-width: 240px;
   width: 100%;

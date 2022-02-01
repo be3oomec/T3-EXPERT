@@ -82,9 +82,9 @@ body.lock {
   }
 
   &:hover {
-    color: $white;
+    color: $orange;
     background-color: transparent;
-    border: 1px solid rgba($white, 0.9);
+    border: 1px solid #E29623;
   }
 
   &:active {
@@ -102,9 +102,9 @@ body.lock {
     }
 
     &:hover {
-      color: $white;
-      background-color: $orange;
-      border: 1px solid transparent;
+      color: $orange;
+      background-color: transparent;
+      border: 1px solid #E29623;
     }
 
     &:active {
