@@ -7,10 +7,15 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .about-info__info {
   flex: 0 1 50%;
+
+  @include _992 {
+    flex: 0 1 100%
+  }
 }
 
 .about-info__info>* {
@@ -27,6 +32,10 @@
 .about-info__content {
   max-width: 521px;
   flex: 0 1 45%;
+
+  @include _992 {
+    flex: 0 1 100%
+  }
 }
 
 .about-info__content {

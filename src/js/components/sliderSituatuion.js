@@ -17,12 +17,18 @@ const situationSlider = new Swiper('.services-situations__slider', {
   //   type: 'bullets',
   // },
 
-  // breakpoints: {
-  //   0: {
-  //     slidesPerView: 1,
-  //   },
-  //   321: {
-  //     slidesPerView: 2,
-  //   },
-  // },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    321: {
+      slidesPerView: 1,
+    },
+    767: {
+      slidesPerView: 2,
+    },
+    993: {
+      slidesPerView: 3,
+    },
+  },
 });

@@ -63,6 +63,16 @@
 
 .breadcrumbs__link {
   color: rgba(255, 255, 255, 0.9);
+
+  &:focus {
+    color: $orange;
+  }
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    color: $orange;
+  }
 }
 
 // .breadcrumbs__link--active {}

@@ -1,5 +1,9 @@
 .services-stages {
   margin-bottom: 155px;
+
+  @include _576 {
+    margin-bottom: 65px;
+  }
 }
 
 // .services-stages__inner {}
@@ -16,6 +20,10 @@
 
   list-style: none;
   counter-reset: section;
+
+  @include _576 {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
 }
 
 .services-stages__item {
@@ -43,6 +51,10 @@
     position: absolute;
     top: -20px;
     left: 42px;
+  }
+
+  @include _576 {
+    padding: 71px 43px 71px 42px;
   }
 }
 

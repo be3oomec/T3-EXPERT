@@ -17,7 +17,9 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 34px 85px 56px;
+  padding: 34px 0 56px 0;
+  @include adaptive-value('padding-left', 85, 30, 1);
+  @include adaptive-value('padding-right', 85, 30, 1);
 }
 
 .about-advantages__number {

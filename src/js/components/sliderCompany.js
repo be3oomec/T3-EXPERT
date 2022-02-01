@@ -1,6 +1,7 @@
 const companySlider = new Swiper('.company__slider', {
   // option
   slidesPerView: 2,
+  spaceBetween: 20,
   grabCursor: true,
   loop: true,
 
@@ -16,12 +17,15 @@ const companySlider = new Swiper('.company__slider', {
   //   type: 'bullets',
   // },
 
-  // breakpoints: {
-  //   0: {
-  //     slidesPerView: 1,
-  //   },
-  //   321: {
-  //     slidesPerView: 2,
-  //   },
-  // },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    321: {
+      slidesPerView: 1,
+    },
+    769: {
+      slidesPerView: 2,
+    },
+  },
 });

@@ -54,6 +54,19 @@
   width: 138px;
   min-height: 43px;
   padding: 11px 20px;
+
+  &:focus {
+    color: $white;
+    background-color: $orange;
+  }
+  &:hover {
+    color: $white;
+    background-color: $orange;
+  }
+  &:active {
+    color: $white;
+    background-color: $orange;
+  }
 }
 
 .services-situations__btn-prev,

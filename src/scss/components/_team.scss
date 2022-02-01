@@ -4,9 +4,13 @@
 
 .team__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   column-gap: 20px;
   row-gap: 83px;
+
+  @include _768 {
+    justify-items: center;
+  }
 }
 
 // .team__item {}

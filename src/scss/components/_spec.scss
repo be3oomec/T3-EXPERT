@@ -1,0 +1,49 @@
+.spec__img {
+  max-width: 133px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-bottom: 23px;
+}
+
+.spec__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.spec__block {
+  margin-bottom: 40px;
+}
+
+.spec__block > h3 {
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #061428;
+  margin-bottom: 4px;
+}
+
+.spec__block > span {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #393939;
+}
+
+// .spec__name {}
+
+// .spec__prof {}
+
+// .spec__education {}
+
+// .spec__institute {}
+
+// .spec__specialization {}
+
+// .spec__specialization-name {}
+
+// .spec__exp {}
+
+// .spec__exp-number {}
