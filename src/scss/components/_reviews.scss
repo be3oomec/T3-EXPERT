@@ -1,6 +1,6 @@
 .reviews {
   background-color: #f1f3f5;
-  padding: 60px 0;
+  padding: 58px 0 67px;
 }
 
 .reviews__top {
@@ -23,7 +23,7 @@
 .reviews__img {
   max-width: 305px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .reviews__img img {
@@ -40,14 +40,14 @@
 
 .reviews__btn {
   position: absolute;
-  top: 350%;
+  top: 335%;
   z-index: 5;
 
   &--prev {
-    left: -85px;
+    left: -97px;
   }
   &--next {
-    right: -85px;
+    right: -97px;
   }
 
   @include _1200 {

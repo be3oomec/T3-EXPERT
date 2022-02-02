@@ -5,7 +5,7 @@
   border-radius: 4px;
   padding: 63px 0;
   @include adaptive-value('padding-left', 57, 20, 1);
-  @include adaptive-value('padding-right', 58, 20, 1);
+  @include adaptive-value('padding-right', 56, 20, 1);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -20,7 +20,7 @@
   @include adaptive-value('font-size', 26, 20, 1);
   color: $orange;
   text-align: center;
-  @include adaptive-value('margin-bottom', 152, 170, 1);
+  @include adaptive-value('margin-bottom', 156, 170, 1);
   position: relative;
   z-index: 5;
 }

@@ -3,18 +3,26 @@
   background-position: center;
   background-size: cover;
 
-  margin-bottom: 100px;
+  margin-bottom: 96px;
+
+  &--review {
+    margin-bottom: 100px;
+  }
+
+  &--team {
+    margin-bottom: 115px;
+  }
 }
 
 .breadcrumbs-section__inner {
   margin-left: 72px;
-  padding: 51px 0 95px 0;
+  padding: 51px 0 93px 0;
 }
 
 .breadcrumbs {
   font-size: 16px;
   color: rgba($white, 0.9);
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +31,7 @@
 
   &--contacts {
     color: rgba(57, 57, 57, 0.8);
+    margin-bottom: 47px;
 
     .breadcrumbs__link {
       color: rgba(57, 57, 57, 0.8);
@@ -35,6 +44,10 @@
         }
       }
     }
+  }
+
+  &--services {
+    margin-bottom: 48px;
   }
 }
 
@@ -79,11 +92,12 @@
 
 .breadcrumbs-section__title {
   font-family: $noto;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 45px;
   line-height: 1.4;
   color: #FFA620;
-  margin-bottom: 14px;
+  margin-bottom: 17px;
+  letter-spacing: 0.95px;
 }
 
 .breadcrumbs-section__descr {

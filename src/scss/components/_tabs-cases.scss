@@ -109,7 +109,7 @@
 
 .tabs__heading {
   font-size: 24px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .tabs__info-title {
@@ -120,7 +120,7 @@
 
 .tabs__info-text {
   color: rgba(57, 57, 57, 0.8);
-  margin-bottom: 35px;
+  margin-bottom: 39px;
 }
 
 .tabs__info-time {
@@ -135,10 +135,10 @@
   z-index: 5;
 
   &--next {
-    right: -85px;
+    right: -96px;
   }
   &--prev {
-    left: -85px;
+    left: -96px;
   }
 
   @include _1200 {

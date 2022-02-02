@@ -14,7 +14,11 @@
   font-size: 36px;
   color: $white;
   margin: 0 auto;
-  margin-bottom: 47px;
+  margin-bottom: 39px;
+}
+
+.questions__title strong {
+  letter-spacing: 0.55px;
 }
 
 .questions__form {

@@ -11,7 +11,7 @@
   justify-items: center;
   row-gap: 60px;
 
-  padding: 60px 0 92px 0;
+  padding: 62px 0 93px 0;
 
   @include _992 {
     .logo {
@@ -22,6 +22,10 @@
   @include _576 {
     text-align: center;
   }
+}
+
+.footer__logo {
+  margin-right: 100px;
 }
 
 .footer__top > * {
@@ -70,8 +74,9 @@
 .footer__contacts > * {
   max-width: 225px;
   width: 100%;
+  margin-left: 30px;
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 }
 
@@ -165,6 +170,7 @@
 }
 
 .footer__bottom {
+  padding: 5px 0;
   background-color: $white;
 }
 
@@ -179,7 +185,7 @@
 
 .footer__inner > * {
   font-size: 13px;
-  line-height: 0.6;
+  line-height: 1;
   color: #3F3F3F;
   &:not(:first-child) {
     border-bottom: 1px solid #3F3F3F;

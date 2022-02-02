@@ -1,8 +1,8 @@
 .social {
   position: fixed;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
-  left: 5rem;
+  left: 145px;
   z-index: 100;
 
   @include _1600 {

@@ -2,12 +2,11 @@
 
 .contacts__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   gap: 30px;
 
-  padding-left: max(15px, calc((100% - 1300px) / 2));
+  padding-left: max(15px, calc((100% - 1280px) / 2));
 
   @include _992 {
     flex-wrap: wrap;
@@ -15,7 +14,7 @@
 }
 
 .contacts__info {
-  margin-top: 51px;
+  margin-top: 50px;
   flex: 0 1 30%;
 
   @include _768 {
@@ -44,7 +43,7 @@
   color: #061428;
 
   &:not(:last-child) {
-    margin-bottom: 53px;
+    margin-bottom: 44px;
   }
 }
 
@@ -61,7 +60,18 @@
   display: block;
 }
 
-// .contacts__phone-number {}
+.contacts__phone-number {
+  transition: color 0.3s;
+  &:focus {
+    color: #CD8A26;
+  }
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    color: #CD8A26;
+  }
+}
 
 .contacts__phone-icon {
   width: 21px;
@@ -103,7 +113,9 @@
   }
 }
 
-// .contact__button {}
+.contact__button {
+  max-width: 275px;
+}
 
 .contacts__map {
   width: calc(100% - 490px - 30px);

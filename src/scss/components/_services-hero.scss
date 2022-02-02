@@ -3,12 +3,17 @@
 }
 
 .hero-services__inner {
+  margin-left: 72px;
   max-width: 650px;
 }
 
 .hero-services__title {
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 45px;
+}
+
+.hero-services__title span {
+  letter-spacing: 0.75px;
 }
 
 .hero-services__title strong {
@@ -20,7 +25,7 @@
 }
 
 .hero-services__list {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .hero-services__item {

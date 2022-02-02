@@ -6,6 +6,14 @@
   @include adaptive-value("padding-bottom", 86, 25, 1);
   @include adaptive-value("margin-bottom", 156, 45, 1);
   text-align: center;
+
+  &--services {
+    margin-bottom: 138px;
+  }
+
+  &--sub {
+    margin-bottom: 132px;
+  }
 }
 
 .consultation__inner {

@@ -1,18 +1,20 @@
 .subservices-hero {
-  padding: 49px 0 137px 0;
+  padding: 50px 0 155px 0;
 }
 
 .subservices-hero__inner {
+  margin-left: 72px;
   max-width: 650px;
 }
 
 .subservices-hero__breadcrumbs {
-  margin-bottom: 74px !important;
+  margin-bottom: 78px !important;
 }
 
 .subservices-hero__title {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 45px;
+  margin-bottom: 54px;
+  letter-spacing: 0.95px;
 }
 
 .subservices-hero__title strong {
@@ -24,7 +26,7 @@
 }
 
 .subservices-hero__list {
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 }
 
 .subservices-hero__item {

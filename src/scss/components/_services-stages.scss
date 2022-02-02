@@ -31,11 +31,12 @@
   box-shadow: 0px 5px 14px #E4E4E4;
   border-radius: 4px;
   padding: 71px 96px 71px 42px;
+  max-height: 239px;
   counter-increment: section;
 
   position: relative;
   &:before {
-    content: counter(section);
+    content: "0" counter(section);
     background: #E29623;
     border-radius: 2px;
     font-family: $bitter;

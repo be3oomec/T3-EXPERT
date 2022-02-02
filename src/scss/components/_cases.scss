@@ -1,9 +1,15 @@
 .cases {
-  margin-bottom: 155px;
+  margin-bottom: 151px;
+
+  &--services {
+    .cases__title {
+      margin-bottom: 33px;
+    }
+  }
 }
 
 .cases__title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .cases__select {
