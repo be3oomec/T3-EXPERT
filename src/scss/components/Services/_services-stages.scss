@@ -54,9 +54,47 @@
     left: 42px;
   }
 
-  @include _576 {
-    padding: 71px 43px 71px 42px;
+  &:nth-child(2) {
+    order: 3;
   }
+  &:nth-child(3) {
+    order: 5;
+  }
+  &:nth-child(4) {
+    order: 2;
+  }
+  &:nth-child(5) {
+    order: 4;
+  }
+  &:nth-child(6) {
+    order: 6;
+  }
+
+  @include _992 {
+    max-height: 100%;
+    padding: 71px 43px 71px 42px;
+
+    &:nth-child(2) {
+      order: initial;
+    }
+
+    &:nth-child(3) {
+      order: initial;
+    }
+
+    &:nth-child(4) {
+      order: initial;
+    }
+
+    &:nth-child(5) {
+      order: initial;
+    }
+
+    &:nth-child(6) {
+      order: initial;
+    }
+  }
+
 }
 
 .services-stages__heading {

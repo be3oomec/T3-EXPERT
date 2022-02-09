@@ -5,7 +5,7 @@ class Modal {
 			isClose: () => {},
 		}
 		this.options = Object.assign(defaultOptions, options);
-		this.modal = document.querySelector('.pop-up');
+		this.modal = document.querySelector('.modal');
 		this.speed = false;
 		this.animation = false;
 		this.isOpen = false;
@@ -38,7 +38,7 @@ class Modal {
 					return;
 				}
 
-				if (e.target.closest('.pop-up__btn-close')) {
+				if (e.target.closest('.modal__close')) {
 					this.close();
 					return;
 				}
@@ -59,7 +59,7 @@ class Modal {
 			}.bind(this));
 
 			this.modal.addEventListener('click', function(e) {
-				if (!e.target.classList.contains('pop-up') && !e.target.closest('.pop-up') && this.isOpen) {
+				if (!e.target.classList.contains('modal__container') && !e.target.closest('.modal__container') && this.isOpen) {
 					this.close();
 				}
 			}.bind(this));
@@ -70,7 +70,7 @@ class Modal {
 		this.previousActiveElement = document.activeElement;
 
 		this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
-		this.modal.classList.add('active');
+		this.modal.classList.add('is-open');
 		this.disableScroll();
 
 		this.modalContainer.classList.add('modal-open');
@@ -88,7 +88,7 @@ class Modal {
 		if (this.modalContainer) {
 			this.modalContainer.classList.remove('animate-open');
 			this.modalContainer.classList.remove(this.animation);
-			this.modal.classList.remove('active');
+			this.modal.classList.remove('is-open');
 			this.modalContainer.classList.remove('modal-open');
 
 			this.enableScroll();
@@ -126,7 +126,7 @@ class Modal {
 	disableScroll() {
 		let pagePosition = window.scrollY;
 		this.lockPadding();
-		document.body.classList.add('lock');
+		document.body.classList.add('disable-scroll');
 		document.body.dataset.position = pagePosition;
 		document.body.style.top = -pagePosition + 'px';
 	}
@@ -135,7 +135,7 @@ class Modal {
 		let pagePosition = parseInt(document.body.dataset.position, 10);
 		this.unlockPadding();
 		document.body.style.top = 'auto';
-		document.body.classList.remove('lock');
+		document.body.classList.remove('disable-scroll');
 		window.scroll({ top: pagePosition, left: 0 });
 		document.body.removeAttribute('data-position');
 	}

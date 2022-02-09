@@ -6,42 +6,43 @@
 @import "options/fonts";
 @import "options/settings";
 
-// ==== MAIN COMPONENTS === \\
-@import 'components/header';
-@import 'components/hero';
-@import 'components/advantages';
-@import 'components/services';
-@import 'components/consultation';
-@import 'components/about';
-@import 'components/cases';
-@import 'components/reviews';
-@import 'components/questions';
-@import 'components/footer';
+// MAIN Page
+@import 'components/Main/header';
+@import 'components/Main/hero';
+@import 'components/Main/advantages';
+@import 'components/Main/services';
+@import 'components/Main/consultation';
+@import 'components/Main/about';
+@import 'components/Main/cases';
+@import 'components/Main/reviews';
+@import 'components/Main/questions';
+@import 'components/Main/footer';
+
+// ABOUT Page
+@import 'components/About/about-advantages';
+@import 'components/About/about-info';
+@import 'components/About/company';
+
+// REVIEW Page
+@import 'components/Review/review-page-reviews';
+
+// CONTACTS Page
+@import 'components/Contacts/contacts-info';
+
+// SERVICES Page
+@import 'components/Services/services-hero';
+@import 'components/Services/services-advantages';
+@import 'components/Services/services-help';
+@import 'components/Services/services-stages';
+@import 'components/Services/specialists';
+@import 'components/Services/seo';
+
+// SUBSERVICES Page
+@import 'components/Subservices/subservices-hero';
+@import 'components/Subservices/subservices-situations';
 
 
-@import 'components/about-advantages';
-@import 'components/about-info';
-@import 'components/company';
-
-
-@import 'components/review-page-reviews';
-
-
-@import 'components/contacts-info';
-
-
-@import 'components/services-hero';
-@import 'components/services-advantages';
-@import 'components/services-help';
-@import 'components/services-stages';
-@import 'components/specialists';
-@import 'components/seo';
-
-@import 'components/subservices-hero';
-@import 'components/subservices-situations';
-
-
-// ==== COMPONENTS PAGE ==== \\
+// COMPONENTS Page
 @import 'components/card';
 @import 'components/social';
 @import 'components/tabs-cases';

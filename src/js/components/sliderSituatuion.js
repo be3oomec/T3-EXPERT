@@ -2,7 +2,6 @@ const situationSlider = new Swiper('.services-situations__slider', {
   // option
   slidesPerView: 3,
   spaceBetween: 20,
-  grabCursor: true,
   loop: true,
 
   // Navigation arrows
