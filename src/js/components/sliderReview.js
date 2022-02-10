@@ -15,6 +15,7 @@ const swiper = new Swiper('.reviews__slider', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable: true,
   },
 
   breakpoints: {
@@ -22,10 +23,10 @@ const swiper = new Swiper('.reviews__slider', {
       slidesPerView: 1,
     },
     321: {
-      slidesPerView: 2,
+      slidesPerView: 1.5,
     },
     600: {
-      slidesPerView: 3,
+      slidesPerView: 2.5,
     },
     993: {
       slidesPerView: 4,

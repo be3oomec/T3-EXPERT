@@ -1,4 +1,4 @@
-.social {
+  .social {
   position: fixed;
   top: 49%;
   transform: translateY(-50%);
@@ -55,7 +55,7 @@
   }
 }
 
-.social__icon {
+.social__icon path{
   width: 30px;
   height: 30px;
   fill: $blue-900;

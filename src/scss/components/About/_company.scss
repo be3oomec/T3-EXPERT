@@ -1,10 +1,10 @@
 .company {
   margin-bottom: 131px;
-}
 
-// .company__wrap {
-//   margin: 0 -10px;
-// }
+  @include _768 {
+    margin-bottom: 65px;
+  }
+}
 
 .company__inner {
   position: relative;
@@ -12,7 +12,6 @@
 
 .company__img {
   max-width: 630px;
-  // padding: 0 10px;
 }
 
 .company__img img {
@@ -28,6 +27,19 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
+  @include _1600 {
+    position: static;
+    transform: translateY(-20%);
+
+    &--next {
+      margin-right: 15px;
+    }
+  }
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .company__btn--prev {
@@ -42,4 +54,14 @@
   width: 42px;
   height: 42px;
   fill: $blue-900;
+}
+
+.company__pagination {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+
+  @include _768 {
+    display: inline-block;
+  }
 }

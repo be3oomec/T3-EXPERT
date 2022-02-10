@@ -1,0 +1,110 @@
+<div class="modal">
+  <div class="modal__container" data-target="consult">
+    <button class="modal__btn-close" type="button" aria-label="Закрыть окно">
+      <svg class="modal__btn-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.1441 8.5956L1.42432 0L0 1.40404L8.71975 9.99964L0 18.5952L1.42432 19.9993L10.1441 11.4037L18.5714 19.711L19.9957 18.307L11.5684 9.99964L19.9957 1.69228L18.5714 0.288239L10.1441 8.5956Z"
+          fill-opacity="0.8" />
+      </svg>
+    </button>
+
+    <h2 class="modal__title title">
+      Запись на консультацию
+    </h2>
+
+    <form class="modal__form" action="#">
+      <label>
+        <input class="modal__input" type="text" name="name" id="name" placeholder="Имя" required />
+      </label>
+      <label>
+        <input class="modal__input" type="tel" name="phone" id="phone" placeholder="Телефон" required />
+      </label>
+      <label>
+        <textarea class="modal__comment" name="comment" id="comment" placeholder="Комментарий" required></textarea>
+      </label>
+      <button class="modal__btn button" type="submit">
+        Записаться
+      </button>
+      <p>
+        Заполняя форму вы соглашаетесь на обработку персональных
+        данных
+      </p>
+    </form>
+  </div>
+  <div class="modal__container modal__container--spec" data-target="spec">
+    <button class="modal__btn-close" type="button" aria-label="Закрыть окно">
+      <svg class="modal__btn-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.1441 8.5956L1.42432 0L0 1.40404L8.71975 9.99964L0 18.5952L1.42432 19.9993L10.1441 11.4037L18.5714 19.711L19.9957 18.307L11.5684 9.99964L19.9957 1.69228L18.5714 0.288239L10.1441 8.5956Z"
+          fill-opacity="0.8" />
+      </svg>
+    </button>
+
+    <div class="modal__wrap">
+      <div class="modal__left">
+        <h2 class="modal__title">Ваш специалист</h2>
+
+        <div class="modal__spec spec">
+          <div class="spec__img">
+            <img src="img/spec-photo.png" alt="Фотография специалиста Александра Иванова" width="133" height="133" />
+          </div>
+
+          <div class="spec__block">
+            <h3 class="spec__name">Александр Иванов</h3>
+            <span class="spec__prof">
+              Специалист по оценке недвижимости
+            </span>
+          </div>
+
+          <div class="spec__block">
+            <h3 class="spec__education">Образование</h3>
+            <span class="spec__institute">
+              БАШГУ, институт права
+            </span>
+          </div>
+
+          <div class="spec__block">
+            <h3 class="spec__specialization">Специализация</h3>
+            <span class="spec__specialization-name"> Юрист </span>
+          </div>
+
+          <div class="spec__block">
+            <h3 class="spec__exp">Стаж</h3>
+            <span class="spec__exp-number"> 5 лет </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__right">
+        <div class="modal__right-text">
+          <p>
+            Suspendisse finibus justo massa, eget tempus nibh semper
+            at. Maecenas mattis nibh ligula, nec tempor neque
+            gravida Suspendisse finibus justo massa, eget tempus
+            nibh semper at.
+          </p>
+        </div>
+        <form class="modal__form" action="#">
+          <label>
+            <input class="modal__input" type="text" name="name" id="name" placeholder="Имя" required />
+          </label>
+          <label>
+            <input class="modal__input" type="tel" name="phone" id="phone" placeholder="Телефон" required />
+          </label>
+          <label>
+            <textarea class="modal__comment" name="comment" id="comment" placeholder="Комментарий" required></textarea>
+          </label>
+          <button class="modal__btn button" type="submit">
+            Записаться
+          </button>
+          <p>
+            Заполняя форму вы соглашаетесь на обработку персональных
+            данных
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

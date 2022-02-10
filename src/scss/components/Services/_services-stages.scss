@@ -1,7 +1,7 @@
 .services-stages {
   margin-bottom: 155px;
 
-  @include _576 {
+  @include _768 {
     margin-bottom: 65px;
   }
 }
@@ -10,6 +10,10 @@
 
 .services-stages__title {
   margin-bottom: 69px;
+
+  @include _576 {
+    text-align: center;
+  }
 }
 
 .services-stages__list {

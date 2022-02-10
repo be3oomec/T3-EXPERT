@@ -38,7 +38,7 @@ class Modal {
 					return;
 				}
 
-				if (e.target.closest('.modal__close')) {
+				if (e.target.closest('.modal__btn-close')) {
 					this.close();
 					return;
 				}

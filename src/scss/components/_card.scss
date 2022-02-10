@@ -4,8 +4,8 @@
   box-shadow: 0px -5px 52px rgba(0, 0, 0, 0.09);
   border-radius: 4px;
   padding: 63px 0;
-  @include adaptive-value('padding-left', 57, 20, 1);
-  @include adaptive-value('padding-right', 56, 20, 1);
+  padding-left: 57px;
+  padding-right: 56px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -13,16 +13,27 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
+
+  @include _576 {
+    padding: 46px 0;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 .card__title {
   font-weight: 500;
-  @include adaptive-value('font-size', 26, 20, 1);
+  font-size: 26px;
   color: $orange;
   text-align: center;
-  @include adaptive-value('margin-bottom', 156, 170, 1);
+  margin-bottom: 156px;
   position: relative;
   z-index: 5;
+
+  @include _375 {
+    font-size: 22px;
+    margin-bottom: 96px;
+  }
 }
 
 .card__list {

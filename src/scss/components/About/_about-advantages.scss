@@ -1,5 +1,9 @@
 .about-advantages {
   margin-bottom: 117px;
+
+  @include _768 {
+    margin-bottom: 60px;
+  }
 }
 
 .about-advantages__list {
@@ -17,9 +21,12 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 34px 0 56px 0;
-  @include adaptive-value('padding-left', 85, 30, 1);
-  @include adaptive-value('padding-right', 85, 30, 1);
+  padding: 34px 85px 56px 85px;
+
+  @include _768 {
+    padding: 34px 43px 56px 43px;
+    text-align: center;
+  }
 }
 
 .about-advantages__number {

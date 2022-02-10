@@ -141,7 +141,7 @@
     left: -96px;
   }
 
-  @include _1200 {
+  @include _1600 {
     position: static;
     margin-top: 50px;
     &--prev {
@@ -169,7 +169,6 @@
   @include _768 {
     display: block;
 
-
     .swiper-pagination-bullet {
       &:not(:last-child) {
         margin-right: 15px;
@@ -192,6 +191,10 @@
 
 .tabs__panel-wrap--offset {
   margin-bottom: 150px;
+
+  @include _768 {
+    margin-bottom: 55px;
+  }
 }
 
 .hidden {

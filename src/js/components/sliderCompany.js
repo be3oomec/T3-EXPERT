@@ -12,10 +12,11 @@ const companySlider = new Swiper('.company__slider', {
   },
 
   // pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   type: 'bullets',
-  // },
+  pagination: {
+    el: '.company__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
 
   breakpoints: {
     0: {
@@ -23,6 +24,9 @@ const companySlider = new Swiper('.company__slider', {
     },
     321: {
       slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
     },
     769: {
       slidesPerView: 2,

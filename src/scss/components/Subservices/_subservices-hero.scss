@@ -1,10 +1,18 @@
 .subservices-hero {
   padding: 50px 0 155px 0;
+
+  @include _768 {
+    padding: 49px 0 49px 0;
+  }
 }
 
 .subservices-hero__inner {
   margin-left: 72px;
   max-width: 650px;
+
+  @include _768 {
+    margin-left: 0;
+  }
 }
 
 .subservices-hero__breadcrumbs {

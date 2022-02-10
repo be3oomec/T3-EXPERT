@@ -11,23 +11,15 @@ const situationSlider = new Swiper('.services-situations__slider', {
   },
 
   // pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   type: 'bullets',
-  // },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    321: {
-      slidesPerView: 1,
-    },
-    767: {
-      slidesPerView: 2,
-    },
-    993: {
-      slidesPerView: 3,
-    },
+  pagination: {
+    el: '.services-situations__pagination',
+    type: 'bullets',
+    clickable: true,
   },
+
+  // breakpoints: {
+  //   767: {
+  //     slidesPerView: 2,
+  //   },
+  // },
 });

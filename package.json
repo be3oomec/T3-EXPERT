@@ -33,7 +33,6 @@
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
-    "gulp-image": "^6.2.1",
     "gulp-notify": "^4.0.0",
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",
@@ -41,6 +40,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
+    "gulp-image": "^6.2.1",
     "gulp-uglify-es": "^3.0.0",
     "node-w3c-validator": "^2.0.1",
     "sass": "^1.38.2"

@@ -6,6 +6,7 @@ const swiperOne = new Swiper('.tabs-swiper-one', {
   pagination: {
     el: '.swiper-one-pagination',
     type: 'bullets',
+    clickable: true,
   },
 
   // Navigation arrows

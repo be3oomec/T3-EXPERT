@@ -3,8 +3,17 @@
   background-position: center;
   background-size: cover;
   background-color: #f1f3f5;
-  @include adaptive-value("padding-top", 132, 45, 1);
-  @include adaptive-value("padding-bottom", 130, 45, 1);
+  padding: 132px 0 130px 0;
+
+  @include _768 {
+    background-image: none !important;
+    background-color: rgba(6, 20, 40, 0.9);
+    padding: 63px 0 75px 0;
+  }
+
+  @include _576 {
+    padding: 40px 0 57px 0;
+  }
 }
 
 .questions__title {
@@ -15,6 +24,7 @@
   color: $white;
   margin: 0 auto;
   margin-bottom: 39px;
+  text-align: center;
 }
 
 .questions__title strong {
@@ -22,8 +32,26 @@
 }
 
 .questions__form {
-  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+
+  @include _992 {
+    display: grid;
+    justify-items: start;
+    grid-template-areas:
+      "name btn"
+      "phone p";
+  }
+
+  @include _576 {
+    grid-template-areas: "name"
+      "phone"
+      "btn"
+      "p";
+  }
 }
 
 .questions__input {
@@ -37,13 +65,42 @@
   &:focus {
     outline: 1px solid $orange;
   }
+
+  @include _992 {
+    .consultation__input:nth-child(1) {
+      order: 1;
+    }
+
+    .consultation__input:nth-child(2) {
+      order: 3;
+    }
+
+    .consultation__input:nth-child(3) {
+      order: 2;
+    }
+
+    .consultation__input:nth-child(4) {
+      order: 4;
+    }
+  }
+
+  @include _576 {
+    .consultation__input:nth-child(1) {
+      order: initial;
+    }
+
+    .consultation__input:nth-child(2) {
+      order: initial;
+    }
+  }
 }
 
 .questions__button {
   min-width: 260px;
   min-height: 50px;
+
   &:focus {
-    box-shadow: 0px 0px 0px 3px rgba($black, 0.5);
+    box-shadow: 0px 0px 0px 3px rgba($orange, 0.7);
   }
 
   &:hover {
@@ -61,4 +118,9 @@
 .questions__text {
   font-size: 14px;
   color: $white;
+
+  @include _992 {
+    text-align: left;
+    max-width: 240px;
+  }
 }

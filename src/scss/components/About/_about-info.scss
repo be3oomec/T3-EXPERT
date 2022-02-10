@@ -1,5 +1,9 @@
 .about-info {
   margin-bottom: 150px;
+
+  @include _768 {
+    margin-bottom: 75px;
+  }
 }
 
 .about-info__inner {
@@ -13,8 +17,8 @@
 .about-info__info {
   flex: 0 1 49%;
 
-  @include _992 {
-    flex: 0 1 100%
+  @include _768 {
+    flex: 0 1 100%;
   }
 }
 
@@ -33,8 +37,8 @@
   max-width: 521px;
   flex: 0 1 45%;
 
-  @include _992 {
-    flex: 0 1 100%
+  @include _768 {
+    flex: 0 1 100%;
   }
 }
 

@@ -5,8 +5,12 @@
 
 .reviews__top {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   position: relative;
+
+  @include _576 {
+    justify-content: center;
+  }
 }
 
 .reviews__list {
@@ -18,6 +22,10 @@
 .reviews__title {
   margin-bottom: 47px;
   margin-right: 35px;
+
+  @include _576 {
+    margin-right: 0;
+  }
 }
 
 .reviews__img {
@@ -50,8 +58,9 @@
     right: -97px;
   }
 
-  @include _1200 {
+  @include _1600 {
     position: static;
+    transform: translateY(-20%);
     &--prev {
       margin-right: 15px;
     }

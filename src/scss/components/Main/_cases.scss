@@ -6,18 +6,29 @@
       margin-bottom: 33px;
     }
   }
+
+  @include _768 {
+    margin-bottom: 65px;
+  }
 }
 
 .cases__title {
   margin-bottom: 50px;
+
+  @include _576 {
+    text-align: center;
+  }
 }
 
 .cases__select {
   display: none;
   float: none;
+  white-space: normal;
   box-shadow: 0px 5px 14px #E4E4E4;
   background-color: #FFFFFF;
   border-radius: 106px;
+
+  align-items: center;
 
   font-weight: 500;
   font-size: 18px;
@@ -27,13 +38,19 @@
   padding-left: 25px;
 
   @include _768 {
-    display: block;
+    display: flex;
     margin-bottom: 90px;
   }
 
   @include _576 {
     margin-bottom: 35px;
+    line-height: 25px;
   }
+}
+
+.cases__select span {
+  display: flex;
+  align-items: flex-end;
 }
 
 .nice-select:after {

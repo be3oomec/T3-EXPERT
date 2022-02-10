@@ -1,16 +1,23 @@
 .team {
   margin-bottom: 73px;
+
+  @include _768 {
+    margin-bottom: -100px;
+  }
 }
 
 .team__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  justify-items: center;
   column-gap: 20px;
   row-gap: 17px;
-
-  @include _768 {
-    justify-items: center;
-  }
 }
 
-// .team__item {}
+.team__item {
+  @include _768 {
+    &:not(:first-child) {
+      margin-top: -120px;
+    }
+  }
+}

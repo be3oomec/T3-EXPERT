@@ -1,6 +1,11 @@
 .seo {
   margin-top: 131px;
   margin-bottom: 143px;
+
+  @include _768 {
+    margin-top: 61px;
+    margin-bottom: 71px;
+  }
 }
 
 // .seo__inner {}

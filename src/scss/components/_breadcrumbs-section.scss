@@ -12,11 +12,19 @@
   &--team {
     margin-bottom: 115px;
   }
+
+  @include _768 {
+    margin-bottom: 43px;
+  }
 }
 
 .breadcrumbs-section__inner {
   margin-left: 72px;
   padding: 51px 0 93px 0;
+
+  @include _768 {
+    margin-left: 0;
+  }
 }
 
 .breadcrumbs {

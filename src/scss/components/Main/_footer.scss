@@ -21,6 +21,7 @@
 
   @include _576 {
     text-align: center;
+    padding: 62px 0 47px 0;
   }
 }
 
@@ -77,6 +78,10 @@
   margin-left: 30px;
   &:not(:last-child) {
     margin-bottom: 23px;
+  }
+
+  @include _576 {
+    text-align: left;
   }
 }
 
@@ -172,6 +177,13 @@
 .footer__bottom {
   padding: 5px 0;
   background-color: $white;
+
+  @include _768 {
+    background-color: $blue-900;
+  }
+  @include _576 {
+    background-color: $black;
+  }
 }
 
 .footer__inner {
@@ -189,6 +201,10 @@
   color: #3F3F3F;
   &:not(:first-child) {
     border-bottom: 1px solid #3F3F3F;
+  }
+
+  @include _768 {
+    color: $white;
   }
 }
 

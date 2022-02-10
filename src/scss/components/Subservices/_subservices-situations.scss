@@ -8,6 +8,10 @@
 
 .services-situations__title {
   margin-bottom: 59px;
+
+  @include _576 {
+    font-size: 30px;
+  }
 }
 
 // .services-situations__slider {}
@@ -27,6 +31,10 @@
   height: 217px;
   padding: 48px 37px;
   margin: 10px 0;
+
+  @include _992 {
+    width: 314px !important;
+  }
 }
 
 .services-situations__text p {

@@ -1,10 +1,18 @@
 .hero-services {
   padding: 49px 0 137px 0;
+
+  @include _768 {
+    padding: 49px 0 49px 0;
+  }
 }
 
 .hero-services__inner {
   margin-left: 72px;
   max-width: 650px;
+
+  @include _768 {
+    margin-left: 0;
+  }
 }
 
 .hero-services__title {

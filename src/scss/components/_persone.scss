@@ -27,6 +27,10 @@
   border-radius: 4px;
 
   transform: translateY(-66px);
+
+  @include _768 {
+    transform: translateY(-160px);
+  }
 }
 
 .person__name {

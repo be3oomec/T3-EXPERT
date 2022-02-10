@@ -1,6 +1,6 @@
 .hero {
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 40% center;
   background-size: cover;
 
   max-height: 659px;
@@ -14,8 +14,14 @@
 .hero__inner {
   max-width: 650px;
   width: 100%;
-  @include adaptive-value("padding-top", 145, 40, 1);
-  @include adaptive-value("padding-bottom", 145, 30, 1);
+  padding: 145px 0;
+
+  @include _768 {
+    padding: 93px 0;
+  }
+  @include _576 {
+    padding: 40px 0 77px 0;
+  }
 }
 
 .hero__title {
@@ -24,6 +30,7 @@
   margin-bottom: 40px;
 
   @include _576 {
+    font-size: 30px;
     text-align: center;
   }
 }
@@ -60,8 +67,15 @@
 }
 
 .hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
   margin-bottom: 60px;
+
+  @include _576 {
+    justify-content: center;
+  }
 }
 
 .hero__social {
