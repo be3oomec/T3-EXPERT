@@ -50,6 +50,10 @@ body.lock {
   max-width: $container + 30px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include _1440 {
+    max-width: 1180px;
+  }
 }
 
 .title {

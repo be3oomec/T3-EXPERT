@@ -3,10 +3,12 @@
 // ======= npm i imask ======= \\
 // =========================== \\
 
-// const element = document.getElementById('phone');
-// const element2 = document.getElementById('phone2');
-// const maskOptions = {
-//   mask: '+{7}(000)000-00-00'
-// };
-// const mask1 = IMask(element, maskOptions);
-// const mask2 = IMask(element2, maskOptions);
+if (document.querySelector('[type="tel"]')) {
+  document.querySelectorAll('[type="tel"]').forEach(el => {
+    const maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    const mask = IMask(el, maskOptions);
+  })
+}
+

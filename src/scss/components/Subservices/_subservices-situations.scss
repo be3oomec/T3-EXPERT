@@ -84,14 +84,45 @@
   position: absolute;
   top: 60%;
   z-index: 5;
+
+  @include _1280 {
+    margin-top: 50px;
+  }
 }
 
 .services-situations__btn-prev {
   left: -97px;
+
+  @include _1440 {
+    left: -57px;
+  }
+
+  @include _1280 {
+    position: static;
+    transform: translateY(-20%);
+    margin-right: 15px;
+  }
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .services-situations__btn-next {
   right: -97px;
+
+  @include _1440 {
+    right: -57px;
+  }
+
+  @include _1280 {
+    position: static;
+    transform: translateY(-20%);
+  }
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .services-situations__btn-icon {

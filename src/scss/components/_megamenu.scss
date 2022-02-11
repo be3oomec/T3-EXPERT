@@ -5,6 +5,10 @@
 .megamenu__inner {
   max-width: 1220px;
   margin: auto;
+
+  @include _768 {
+    margin: 0;
+  }
 }
 
 .megamenu__form {
@@ -52,8 +56,17 @@
 
   margin: 0 -75px;
 
+  @include _1200 {
+    margin: 0 -30px;
+  }
+
+  @include _992 {
+    margin: 0 -10px;
+  }
+
   @include _768 {
-    margin-bottom: 150px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $white;
   }
 }
 
@@ -64,9 +77,14 @@
 
   padding: 0 75px;
 
+  @include _1200 {
+    padding: 0 30px;
+  }
+
   @include _992 {
     margin-bottom: 30px;
     flex: 0 1 50%;
+    padding: 0 10px;
   }
 
   @include _768 {
@@ -81,8 +99,12 @@
   color: $white;
   margin-bottom: 50px;
 
+  @include _768 {
+    margin-bottom: 20px;
+  }
+
   @include _576 {
-    font-size: 17px;
+    font-size: 19px;
     margin-bottom: 10px;
     cursor: pointer;
   }
@@ -102,6 +124,12 @@
 .megamenu__item {
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+  @include _768 {
+    max-width: 340px;
+  }
+  @include _576 {
+    max-width: 245px;
   }
 }
 
@@ -129,10 +157,12 @@
 
   @include __768 {
     display: none;
+    font-size: 26px;
   }
 
   @include _576 {
-    font-size: 17px;
+    margin-bottom: 70px;
+    font-size: 20px;
   }
 }
 
@@ -142,4 +172,74 @@
 
 .open .megamenu__list {
   opacity: 1;
+}
+
+.megamenu__phone {
+  display: block;
+  margin-bottom: 70px;
+}
+
+.megamenu__social {
+  display: none;
+  @include _768 {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+.megamenu__phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+
+  &:focus {
+    .megamenu__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:hover {
+    .megamenu__phone-number {
+      color: $orange;
+    }
+  }
+
+  &:active {
+    .megamenu__phone-number {
+      opacity: 0.5;
+    }
+  }
+}
+
+.megamenu__phone-number {
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: $white;
+  padding-left: 25px;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color,
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s opacity;
+}
+
+.megamenu__phone-icon {
+  width: 23px;
+  height: 22px;
+  fill: currentColor;
+
+  position: absolute;
+  top: 0;
+  left: -4px;
+}
+
+.megamenu__phone-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: $orange;
+  border-bottom: 1px solid $orange;
 }

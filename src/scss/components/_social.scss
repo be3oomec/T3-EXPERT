@@ -1,63 +1,80 @@
   .social {
-  position: fixed;
-  top: 49%;
-  transform: translateY(-50%);
-  left: 145px;
-  z-index: 100;
+    position: fixed;
+    top: 49%;
+    transform: translateY(-50%);
+    left: 145px;
+    z-index: 100;
 
-  @include _1600 {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translateY(0);
-    margin-top: 30px;
+    // @media only screen and (max-width: 1700px) {
+    //   position: relative;
+    //   top: 0;
+    //   left: 0;
+    //   transform: translateY(0);
+    //   margin-top: 30px;
+    // }
+    @media only screen and (max-width: 1700px) {
+      left: 95px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+      left: 25px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      left: 5px;
+    }
+
+    @media only screen and (max-width: 1279px) {
+      display: none;
+    }
   }
-}
 
-.social__item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  @include _1600 {
+  .social__item {
     &:not(:last-child) {
-      margin-right: 20px;
-      margin-bottom: 0;
+      margin-bottom: 20px;
+    }
+
+    @include _1600 {
+      &:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
     }
   }
-}
 
-.social__link {
-  background-color: $white;
-  border-radius: 2px;
-  padding: 13px;
+  .social__link {
+    background-color: $white;
+    border-radius: 2px;
+    padding: 13px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s background-color;
 
-  &:focus {
-    .social__icon {
-      fill: $orange;
+    &:focus {
+      .social__icon {
+        fill: $orange;
+      }
+    }
+
+    &:hover {
+      .social__icon {
+        fill: $orange;
+      }
+    }
+
+    &:active {
+      .social__icon {
+        fill: $orange;
+      }
     }
   }
-  &:hover {
-    .social__icon {
-      fill: $orange;
-    }
-  }
-  &:active {
-    .social__icon {
-      fill: $orange;
-    }
-  }
-}
 
-.social__icon path{
-  width: 30px;
-  height: 30px;
-  fill: $blue-900;
-  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s fill;
-}
+  .social__icon {
+    width: 30px;
+    height: 30px;
+    fill: $blue-900;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s fill;
+  }

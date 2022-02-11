@@ -28,10 +28,27 @@
   top: 50%;
   transform: translateY(-50%);
 
-  @include _1600 {
+  &--prev {
+    right: -95px;
+  }
+
+  &--next {
+    left: -95px;
+  }
+
+  @include _1440 {
+    &--prev {
+      right: -57px;
+    }
+
+    &--next {
+      left: -57px;
+    }
+  }
+
+  @include _1280 {
     position: static;
     transform: translateY(-20%);
-
     &--next {
       margin-right: 15px;
     }
@@ -40,14 +57,6 @@
   @include _768 {
     display: none;
   }
-}
-
-.company__btn--prev {
-  right: -95px;
-}
-
-.company__btn--next {
-  left: -95px;
 }
 
 .company__btn-icon {

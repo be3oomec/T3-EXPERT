@@ -54,13 +54,25 @@
   &--prev {
     left: -97px;
   }
+
   &--next {
     right: -97px;
   }
 
-  @include _1600 {
+  @include _1440 {
+    &--prev {
+      left: -57px;
+    }
+
+    &--next {
+      right: -57px;
+    }
+  }
+
+  @include _1280 {
     position: static;
     transform: translateY(-20%);
+
     &--prev {
       margin-right: 15px;
     }
