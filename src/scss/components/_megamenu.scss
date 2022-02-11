@@ -175,7 +175,6 @@
 }
 
 .megamenu__phone {
-  display: block;
   margin-bottom: 70px;
 }
 
@@ -190,7 +189,7 @@
 }
 
 .megamenu__phone {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
 
@@ -212,6 +211,10 @@
     .megamenu__phone-number {
       opacity: 0.5;
     }
+  }
+
+  @include _768 {
+    display: flex;
   }
 }
 
