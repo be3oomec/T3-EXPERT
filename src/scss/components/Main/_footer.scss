@@ -85,7 +85,7 @@
   }
 }
 
-.footer__phone {
+.footer__phone-link {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -138,6 +138,7 @@
   font-weight: 700;
   color: $orange;
   border-bottom: 1px solid $orange;
+  cursor: pointer;
 }
 
 .footer__address {

@@ -16,8 +16,6 @@
 
 // .services-situations__slider {}
 
-// .services-situations__list {}
-
 .services-situations__item {
   background: #FFFFFF;
   box-sizing: border-box;
@@ -27,14 +25,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 414px !important;
+
+  width: 414px;
   height: 217px;
   padding: 48px 37px;
   margin: 10px 0;
 
-  @include _992 {
-    width: 314px !important;
-  }
+  // @include _992 {
+  //   width: 314px !important;
+  // }
 }
 
 .services-situations__text p {
@@ -97,10 +96,11 @@
     left: -57px;
   }
 
-  @include _1280 {
+  @include _1440 {
     position: static;
     transform: translateY(-20%);
     margin-right: 15px;
+    margin-top: 30px;
   }
 
   @include _768 {
@@ -115,9 +115,10 @@
     right: -57px;
   }
 
-  @include _1280 {
+  @include _1440 {
     position: static;
     transform: translateY(-20%);
+    margin-top: 30px;
   }
 
   @include _768 {

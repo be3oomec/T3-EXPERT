@@ -65,7 +65,6 @@
 
 .header__bottom {
   background-color: $white;
-  box-shadow: 0px 5px 14px #e4e4e4;
   padding: 25px 0 21px 0;
 }
 
@@ -135,6 +134,12 @@
 }
 
 .header__phone {
+  @include _768 {
+    display: none;
+  }
+}
+
+.header__phone-link {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -186,6 +191,11 @@
   font-size: 15px;
   color: $orange;
   border-bottom: 1px solid $orange;
+  cursor: pointer;
+
+  @include _768 {
+    display: none;
+  }
 }
 
 .header__phone-768 {

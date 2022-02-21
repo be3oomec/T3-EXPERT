@@ -4,6 +4,11 @@
   @include _768 {
     padding: 49px 0 49px 0;
   }
+
+  @include _576 {
+    background-image: none !important;
+    background-color: $blue-900;
+  }
 }
 
 .subservices-hero__inner {

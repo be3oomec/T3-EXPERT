@@ -2,6 +2,7 @@ const situationSlider = new Swiper('.services-situations__slider', {
   // option
   slidesPerView: 3,
   spaceBetween: 20,
+  // grabCursor: true,
   loop: true,
 
   // Navigation arrows
@@ -17,9 +18,18 @@ const situationSlider = new Swiper('.services-situations__slider', {
     clickable: true,
   },
 
-  // breakpoints: {
-  //   767: {
-  //     slidesPerView: 2,
-  //   },
-  // },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 1.5,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
 });

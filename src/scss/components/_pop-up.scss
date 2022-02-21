@@ -31,6 +31,10 @@
   padding-left: 140px;
   padding-right: 140px;
   display: none;
+
+  @include _576 {
+    margin: 5px 5px auto;
+  }
 }
 
 @media (max-width: 1200px) {

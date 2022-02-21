@@ -37,10 +37,12 @@
   width: 100%;
   margin-bottom: 63px;
   text-align: center;
+
   @include _768 {
     text-align: left;
     margin-bottom: 56px;
   }
+
   @include _576 {
     text-align: center;
   }
@@ -92,12 +94,15 @@
     .consultation__input:nth-child(1) {
       order: 1;
     }
+
     .consultation__input:nth-child(2) {
       order: 3;
     }
+
     .consultation__input:nth-child(3) {
       order: 2;
     }
+
     .consultation__input:nth-child(4) {
       order: 4;
     }
@@ -141,9 +146,17 @@
 .consultation__text {
   font-size: 14px;
   color: rgba(57, 57, 57, 0.8);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
 
   @include _992 {
     text-align: left;
     max-width: 240px;
+  }
+}
+
+.consultation__text-link {
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
+  &:hover {
+    color: #E29623;
   }
 }

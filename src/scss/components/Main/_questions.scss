@@ -118,9 +118,17 @@
 .questions__text {
   font-size: 14px;
   color: $white;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
 
   @include _992 {
     text-align: left;
     max-width: 240px;
+  }
+}
+
+.questions__text-link {
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
+  &:hover {
+    color: #E29623;
   }
 }

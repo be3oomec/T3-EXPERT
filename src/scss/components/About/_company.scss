@@ -46,7 +46,7 @@
     }
   }
 
-  @include _1280 {
+  @include _1440 {
     position: static;
     transform: translateY(-20%);
     &--next {

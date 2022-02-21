@@ -94,10 +94,12 @@
 }
 
 .megamenu__heading {
+  display: block;
   font-weight: 500;
   font-size: 28px;
   color: $white;
   margin-bottom: 50px;
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
 
   @include _768 {
     margin-bottom: 20px;
@@ -106,7 +108,10 @@
   @include _576 {
     font-size: 19px;
     margin-bottom: 10px;
-    cursor: pointer;
+  }
+
+  &:hover {
+    color: #E29623;
   }
 }
 

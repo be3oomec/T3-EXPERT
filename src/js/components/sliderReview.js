@@ -11,7 +11,7 @@ const swiper = new Swiper('.reviews__slider', {
     prevEl: '.swiper-btn-prev',
   },
 
-
+  // pagination
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
