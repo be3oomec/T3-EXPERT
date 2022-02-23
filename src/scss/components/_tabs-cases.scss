@@ -56,7 +56,12 @@
   box-shadow: inset 0px 4px 4px rgba($orange, 0.25);
 }
 
+.tabs__content {
+  position: relative;
+}
+
 .tabs__panel {
+  position: relative;
   padding: 0 10px;
 }
 
@@ -65,10 +70,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-}
-
-.tabs__content {
-  position: relative;
 }
 
 .tabs__img {
@@ -137,6 +138,7 @@
   &--next {
     right: -96px;
   }
+
   &--prev {
     left: -96px;
   }
@@ -154,6 +156,7 @@
   @include _1440 {
     position: static;
     margin-top: 50px;
+
     &--prev {
       margin-right: 15px;
     }
@@ -171,6 +174,7 @@
 .tabs__arrow-icon {
   width: 42px;
   height: 42px;
+  pointer-events: none;
 }
 
 .tabs__pagination {

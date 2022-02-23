@@ -1,25 +1,30 @@
-if (document.querySelector('.cases__tabs')) {
-  const casesSlider = new Swiper('.tabs-slider', {
-    // option
-    slidesPerView: 1,
-    grabCursor: true,
-    loop: true,
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.tabs-slider');
 
-    // pagination
-    pagination: {
-      el: '.tabs__pagination',
-      type: 'bullets',
-      clickable: true,
-    },
+  sliders.forEach(el => {
+    const casesSlider = new Swiper(el, {
+      // option
+      slidesPerView: 1,
+      grabCursor: true,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.tabs__arrow--next',
-      prevEl: '.tabs__arrow--prev',
-    },
+      // pagination
+      pagination: {
+        el: el.querySelector('.tabs__pagination'),
+        type: 'bullets',
+        clickable: true,
+      },
 
-    observer: true,
-		observeParents: true,
-    observeSlideChildren: true,
+      // Navigation arrows
+      navigation: {
+        nextEl: el.parentNode.querySelectorAll('.tabs__arrow--next')[0],
+        prevEl: el.parentNode.querySelectorAll('.tabs__arrow--prev')[0],
+      },
+    });
+    // casesSlider.update();
+    // casesSlider.navigation.update();
   });
-}
+});
