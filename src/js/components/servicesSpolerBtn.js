@@ -1,25 +1,17 @@
-function readMore() {
-  const spolerMore = document.querySelector('.seo__spoler-more');
-  const spolerBtnMore = document.querySelector('.seo__spoler-btn-more');
+if (document.querySelector('.seo__text')) {
+  const button = document.querySelector(".seo__btn");
+  const text = document.querySelector('.seo__text');
 
-  function hideSpoler() {
-    spolerMore.classList.add('hidden');
-    spolerBtnMore.innerHTML = 'Показать полностью';
-  }
-  function visionSpoler() {
-    spolerMore.classList.remove('hidden');
-    spolerBtnMore.innerHTML = 'Скрыть';
-  }
 
-  if (spolerBtnMore) {
-    spolerBtnMore.addEventListener('click', function() {
-      if (spolerMore.classList.contains('hidden')) {
-        visionSpoler();
+  if (button) {
+    button.addEventListener('click', function (e) {
+      if (text.classList.contains('open')) {
+        text.classList.remove('open');
+        button.innerHTML = 'Показать полностью';
       } else {
-        hideSpoler();
+        text.classList.add('open');
+        button.innerHTML = 'Скрыть';
       }
     });
   }
-}
-
-readMore();
+};

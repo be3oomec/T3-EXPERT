@@ -32,6 +32,42 @@
       </p>
     </form>
   </div>
+
+  <div id="popup" class="modal__container popup">
+    <button class="modal__btn-close" type="button" aria-label="Закрыть окно">
+      <svg class="modal__btn-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M10.1441 8.5956L1.42432 0L0 1.40404L8.71975 9.99964L0 18.5952L1.42432 19.9993L10.1441 11.4037L18.5714 19.711L19.9957 18.307L11.5684 9.99964L19.9957 1.69228L18.5714 0.288239L10.1441 8.5956Z"
+          fill-opacity="0.8" />
+      </svg>
+    </button>
+
+    <h2 class="modal__title title">
+      Запись на консультацию
+    </h2>
+
+    <form class="modal__form" action="#">
+      <label>
+        <input class="modal__input" type="text" name="name-consult" id="name-consult" placeholder="Имя" required />
+      </label>
+      <label>
+        <input class="modal__input" type="tel" name="phone-consult" id="phone-consult" placeholder="Телефон" required />
+      </label>
+      <label>
+        <textarea class="modal__comment" name="comment-consult" id="comment-consult" placeholder="Комментарий"
+          required></textarea>
+      </label>
+      <button class="modal__btn button" type="submit">
+        Записаться
+      </button>
+      <p>
+        Заполняя форму вы соглашаетесь на обработку персональных
+        данных
+      </p>
+    </form>
+  </div>
+
   <div class="modal__container modal__container--spec" data-target="spec">
     <button class="modal__btn-close" type="button" aria-label="Закрыть окно">
       <svg class="modal__btn-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"

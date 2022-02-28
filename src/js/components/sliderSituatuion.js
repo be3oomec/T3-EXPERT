@@ -1,19 +1,18 @@
-const situationSlider = new Swiper('.services-situations__slider', {
+const situationSlider = new Swiper('.subservices-situations__slider', {
   // option
   slidesPerView: 3,
   spaceBetween: 20,
-  // grabCursor: true,
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.services-situations__btn-next',
-    prevEl: '.services-situations__btn-prev',
+    nextEl: '.subservices-situations__next',
+    prevEl: '.subservices-situations__prev',
   },
 
   // pagination
   pagination: {
-    el: '.services-situations__pagination',
+    el: '.subservices-situations__pagination',
     type: 'bullets',
     clickable: true,
   },

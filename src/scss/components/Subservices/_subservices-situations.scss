@@ -1,12 +1,12 @@
-.services-situations {
+.subservices-situations {
   margin-bottom: 122px;
 }
 
-.services-situations__inner {
+.subservices-situations__inner {
   position: relative;
 }
 
-.services-situations__title {
+.subservices-situations__title {
   margin-bottom: 59px;
 
   @include _576 {
@@ -14,9 +14,9 @@
   }
 }
 
-// .services-situations__slider {}
+// .subservices-situations__slider {}
 
-.services-situations__item {
+.subservices-situations__item {
   background: #FFFFFF;
   box-sizing: border-box;
   box-shadow: 0px 5px 14px #E4E4E4;
@@ -36,7 +36,7 @@
   // }
 }
 
-.services-situations__text p {
+.subservices-situations__text p {
   font-family: $roboto;
   font-weight: 500;
   font-size: 18px;
@@ -45,11 +45,11 @@
   margin-bottom: 29px;
 }
 
-.services-situations__text p strong {
+.subservices-situations__text p strong {
   border-bottom: 1px solid #061428;
 }
 
-.services-situations__btn {
+.subservices-situations__button {
   font-family: $roboto;
   font-weight: 500;
   font-size: 15px;
@@ -76,8 +76,8 @@
   }
 }
 
-.services-situations__btn-prev,
-.services-situations__btn-next {
+.subservices-situations__prev,
+.subservices-situations__next {
   width: 42px;
   height: 42px;
   position: absolute;
@@ -89,7 +89,7 @@
   }
 }
 
-.services-situations__btn-prev {
+.subservices-situations__prev {
   left: -97px;
 
   @include _1440 {
@@ -108,7 +108,7 @@
   }
 }
 
-.services-situations__btn-next {
+.subservices-situations__next {
   right: -97px;
 
   @include _1440 {
@@ -126,7 +126,7 @@
   }
 }
 
-.services-situations__btn-icon {
+.subservices-situations__btn-icon {
   width: 42px;
   height: 42px;
 }

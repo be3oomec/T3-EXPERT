@@ -12,9 +12,15 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s;
 }
 
 .modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.open {
   opacity: 1;
   visibility: visible;
 }

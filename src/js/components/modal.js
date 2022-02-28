@@ -67,7 +67,7 @@ class Modal {
 	}
 
 	open() {
-		this.previousActiveElement = document.activeElement;
+    this.previousActiveElement = document.activeElement;
 
 		this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
 		this.modal.classList.add('is-open');
@@ -77,7 +77,7 @@ class Modal {
 		this.modalContainer.classList.add(this.animation);
 
 		setTimeout(() => {
-			this.options.isOpen(this);
+      this.options.isOpen(this);
 			this.modalContainer.classList.add('animate-open');
 			this.isOpen = true;
 			this.focusTrap();
