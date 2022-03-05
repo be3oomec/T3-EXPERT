@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
 
   width: 414px;
   height: 217px;
@@ -36,13 +36,16 @@
   // }
 }
 
+.subservices-situations__text {
+  margin-bottom: 10px;
+}
+
 .subservices-situations__text p {
   font-family: $roboto;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.4;
   color: #061428;
-  margin-bottom: 29px;
 }
 
 .subservices-situations__text p strong {
@@ -61,15 +64,18 @@
   width: 138px;
   min-height: 43px;
   padding: 11px 20px;
+  cursor: pointer;
 
   &:focus {
     color: $white;
     background-color: $orange;
   }
+
   &:hover {
     color: $white;
     background-color: $orange;
   }
+
   &:active {
     color: $white;
     background-color: $orange;

@@ -3,7 +3,6 @@ const situationSlider = new Swiper('.subservices-situations__slider', {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
-
   // Navigation arrows
   navigation: {
     nextEl: '.subservices-situations__next',

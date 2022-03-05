@@ -131,6 +131,24 @@
   margin-bottom: 20px;
 }
 
+.modal__btn-close:focus-visible {
+  outline: none;
+}
+
+.modal__text {
+  font-size: 14px;
+  color: rgba(57, 57, 57, 0.8);
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
+}
+
+.modal__text-link {
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s color;
+
+  &:hover {
+    color: #E29623;
+  }
+}
+
 .modal p {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
