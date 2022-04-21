@@ -19,6 +19,12 @@
 .reviews-list__img {
   max-width: 305px;
   margin-bottom: 15px;
+
+  & a {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
 }
 
 .reviews-list__img img {

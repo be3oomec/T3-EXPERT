@@ -81,6 +81,13 @@
     flex: 0 1 100%;
     margin-bottom: 30px;
   }
+
+  & a {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
 }
 
 .tabs__img img {
