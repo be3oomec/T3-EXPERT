@@ -1,1 +1,520 @@
-"use strict";var accordions=document.querySelectorAll(".megamenu__col");accordions.forEach((function(e){e.addEventListener("click",(function(e){var t=e.currentTarget,i=t.querySelector(".megamenu__heading"),s=t.querySelector(".megamenu__list");t.classList.toggle("open"),t.classList.contains("open")?(i.setAttribute("aria-expanded",!0),s.setAttribute("aria-hidden",!1),s.style.maxHeight=s.scrollHeight+"px"):(i.setAttribute("aria-expanded",!1),s.setAttribute("aria-hidden",!0),s.style.maxHeight=null)}))}));var burger=document.querySelector(".burger"),menu=document.querySelector(".header__megamenu");burger&&burger.addEventListener("click",(function(e){menu.classList.add("active"),document.body.classList.add("lock")}));var header=document.querySelector(".header__bottom"),hero=document.querySelector("#hero"),headerHeight=header.offsetHeight,heroHeight=hero.offsetHeight;function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _defineProperties(e,t){for(var i=0;i<t.length;i++){var s=t[i];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(e,s.key,s)}}function _createClass(e,t,i){return t&&_defineProperties(e.prototype,t),i&&_defineProperties(e,i),e}window.addEventListener("scroll",(function(){window.scrollY>=heroHeight+headerHeight?(header.classList.add("header--fixed"),hero.style.marginTop="".concat(headerHeight,"px")):(header.classList.remove("header--fixed"),hero.style.marginTop=null)}));var Modal=function(){function e(t){_classCallCheck(this,e);this.options=Object.assign({isOpen:function(){},isClose:function(){}},t),this.modal=document.querySelector(".pop-up"),this.speed=!1,this.animation=!1,this.isOpen=!1,this.modalContainer=!1,this.previousActiveElement=!1,this.fixBlocks=document.querySelectorAll(".fix-block"),this.focusElements=["a[href]","input","button","select","textarea","[tabindex]"],this.events()}return _createClass(e,[{key:"events",value:function(){this.modal&&(document.addEventListener("click",function(e){var t=e.target.closest("[data-path]");if(t){var i=t.dataset.path,s=t.dataset.animation,n=t.dataset.speed;return this.animation=s||"fade",this.speed=n?parseInt(n):300,this.modalContainer=document.querySelector('[data-target="'.concat(i,'"]')),void this.open()}e.target.closest(".pop-up__btn-close")&&this.close()}.bind(this)),window.addEventListener("keydown",function(e){27==e.keyCode&&this.isOpen&&this.close(),9==e.keyCode&&this.isOpen&&this.focusCatch(e)}.bind(this)),this.modal.addEventListener("click",function(e){e.target.classList.contains("pop-up")||e.target.closest(".pop-up")||!this.isOpen||this.close()}.bind(this)))}},{key:"open",value:function(){var e=this;this.previousActiveElement=document.activeElement,this.modal.style.setProperty("--transition-time","".concat(this.speed/1e3,"s")),this.modal.classList.add("active"),this.disableScroll(),this.modalContainer.classList.add("modal-open"),this.modalContainer.classList.add(this.animation),setTimeout((function(){e.options.isOpen(e),e.modalContainer.classList.add("animate-open"),e.isOpen=!0,e.focusTrap()}),this.speed)}},{key:"close",value:function(){this.modalContainer&&(this.modalContainer.classList.remove("animate-open"),this.modalContainer.classList.remove(this.animation),this.modal.classList.remove("active"),this.modalContainer.classList.remove("modal-open"),this.enableScroll(),this.options.isClose(this),this.isOpen=!1,this.focusTrap())}},{key:"focusCatch",value:function(e){var t=this.modalContainer.querySelectorAll(this.focusElements),i=Array.prototype.slice.call(t),s=i.indexOf(document.activeElement);e.shiftKey&&0===s&&(i[i.length-1].focus(),e.preventDefault()),e.shiftKey||s!==i.length-1||(i[0].focus(),e.preventDefault())}},{key:"focusTrap",value:function(){var e=this.modalContainer.querySelectorAll(this.focusElements);this.isOpen?e[0].focus():this.previousActiveElement.focus()}},{key:"disableScroll",value:function(){var e=window.scrollY;this.lockPadding(),document.body.classList.add("lock"),document.body.dataset.position=e,document.body.style.top=-e+"px"}},{key:"enableScroll",value:function(){var e=parseInt(document.body.dataset.position,10);this.unlockPadding(),document.body.style.top="auto",document.body.classList.remove("lock"),window.scroll({top:e,left:0}),document.body.removeAttribute("data-position")}},{key:"lockPadding",value:function(){var e=window.innerWidth-document.body.offsetWidth+"px";this.fixBlocks.forEach((function(t){t.style.paddingRight=e})),document.body.style.paddingRight=e}},{key:"unlockPadding",value:function(){this.fixBlocks.forEach((function(e){e.style.paddingRight="0px"})),document.body.style.paddingRight="0px"}}]),e}(),modal=new Modal({isOpen:function(e){console.log(e),console.log("opened")},isClose:function(){console.log("closed")}}),select=document.getElementById("selCases"),tabsContent=document.querySelectorAll(".tabs__content > .tabs__panel");if(select){var toggleHidden=function(){tabsContent.forEach((function(e){e.classList.contains("tabs__".concat(select.value))?(e.classList.remove("hidden"),e.classList.add("tabs__panel--active")):(e.classList.add("hidden"),e.classList.remove("tabs__panel--active"))}))};select.addEventListener("change",toggleHidden),toggleHidden()}var swiperOne=new Swiper(".tabs-swiper-one",{slidesPerView:1,grabCursor:!0,pagination:{el:".swiper-one-pagination",type:"bullets"},navigation:{nextEl:".swiper-one-b-next",prevEl:".swiper-one-b-prev"}}),swiperTwo=new Swiper(".tabs-swiper-two",{slidesPerView:1,grabCursor:!0,pagination:{el:".swiper-two-pagination",type:"bullets"},navigation:{nextEl:".swiper-two-b-next",prevEl:".swiper-two-b-prev"}}),swiperThree=new Swiper(".tabs-swiper-three",{slidesPerView:1,grabCursor:!0,pagination:{el:".swiper-three-pagination",type:"bullets"},navigation:{nextEl:".swiper-three-b-next",prevEl:".swiper-three-b-prev"}}),swiperFour=new Swiper(".tabs-swiper-four",{slidesPerView:1,grabCursor:!0,pagination:{el:".swiper-four-pagination",type:"bullets"},navigation:{nextEl:".swiper-four-b-next",prevEl:".swiper-four-b-prev"}}),swiperFive=new Swiper(".tabs-swiper-five",{slidesPerView:1,grabCursor:!0,pagination:{el:".swiper-five-pagination",type:"bullets"},navigation:{nextEl:".swiper-five-b-next",prevEl:".swiper-five-b-prev"}}),companySlider=new Swiper(".company__slider",{slidesPerView:2,spaceBetween:20,grabCursor:!0,loop:!0,navigation:{nextEl:".company__btn--prev",prevEl:".company__btn--next"},breakpoints:{0:{slidesPerView:1},321:{slidesPerView:1},769:{slidesPerView:2}}}),swiper=new Swiper(".reviews__slider",{slidesPerView:4,spaceBetween:20,grabCursor:!0,loop:!0,navigation:{nextEl:".swiper-btn-next",prevEl:".swiper-btn-prev"},pagination:{el:".swiper-pagination",type:"bullets"},breakpoints:{0:{slidesPerView:1},321:{slidesPerView:2},600:{slidesPerView:3},993:{slidesPerView:4}}}),situationSlider=new Swiper(".services-situations__slider",{slidesPerView:3,spaceBetween:20,grabCursor:!0,loop:!0,navigation:{nextEl:".services-situations__btn-next",prevEl:".services-situations__btn-prev"},breakpoints:{0:{slidesPerView:1},321:{slidesPerView:1},767:{slidesPerView:2},993:{slidesPerView:3}}}),menuLinks=document.querySelectorAll("a[data-goto]");if(menuLinks.length>0){var onMenuLinkClick=function(e){var t=e.target;if(t.dataset.goto&&document.querySelector(t.dataset.goto)){var i=document.querySelector(t.dataset.goto).getBoundingClientRect().top+pageYOffset-document.querySelector("header").offsetHeight;burger.classList.contains("burger-active")&&(menu.classList.remove("active"),burger.classList.remove("burger-active"),document.body.classList.remove("lock")),window.scrollTo({top:i,behavior:"smooth"}),e.preventDefault()}};menuLinks.forEach((function(e){e.addEventListener("click",onMenuLinkClick)}))}var tabs1=new GraphTabs("tab",{isChanged:function(e){console.log(e)}}),btnClose=document.querySelector(".button-close"),megaMenu=document.querySelector(".header__megamenu");btnClose&&btnClose.addEventListener("click",(function(){menu.classList.remove("active"),document.body.classList.remove("lock")})),NiceSelect.bind(document.getElementById("selCases"));
+"use strict";
+
+// ---------------------- MOBILE BURGER ---------------------
+if (document.querySelector('.burger')) {
+  var burger = document.querySelector('.burger');
+  var menu = document.querySelector('.header__megamenu');
+  burger.addEventListener('click', function (e) {
+    menu.classList.add('active');
+    document.body.classList.add('lock');
+  });
+
+  if (document.querySelector(".button-close")) {
+    var btnClose = document.querySelector(".button-close");
+    btnClose.addEventListener("click", function () {
+      menu.classList.remove("active");
+      document.body.classList.remove("lock");
+    });
+  }
+} // ---------------------- MOBILE BURGER ---------------------
+"use strict";
+
+// =============================== \\
+// ========== FIXED MENU ========= \\
+// =============================== \\
+if (document.querySelector("#hero")) {
+  var header = document.querySelector(".header__bottom");
+  var hero = document.querySelector("#hero");
+  var headerHeight = header === null || header === void 0 ? void 0 : header.offsetHeight;
+  var heroHeight = hero === null || hero === void 0 ? void 0 : hero.offsetHeight;
+  window.addEventListener("scroll", function () {
+    var scrollDistance = window.scrollY;
+
+    if (scrollDistance >= heroHeight + headerHeight) {
+      header.classList.add("header--fixed");
+      hero.style.marginTop = "".concat(headerHeight, "px");
+    } else {
+      header.classList.remove("header--fixed");
+      hero.style.marginTop = null;
+    }
+  });
+}
+"use strict";
+
+// =========================== \\
+// ======== MASK PHONE ======= \\
+// ======= npm i imask ======= \\
+// =========================== \\
+if (document.querySelector('[type="tel"]')) {
+  document.querySelectorAll('[type="tel"]').forEach(function (el) {
+    var maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+    var mask = IMask(el, maskOptions);
+  });
+}
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Modal = /*#__PURE__*/function () {
+  function Modal(options) {
+    _classCallCheck(this, Modal);
+
+    var defaultOptions = {
+      isOpen: function isOpen() {},
+      isClose: function isClose() {}
+    };
+    this.options = Object.assign(defaultOptions, options);
+    this.modal = document.querySelector('.modal');
+    this.speed = false;
+    this.animation = false;
+    this.isOpen = false;
+    this.modalContainer = false;
+    this.previousActiveElement = false;
+    this.fixBlocks = document.querySelectorAll('.fix-block');
+    this.focusElements = ['a[href]', 'input', 'button', 'select', 'textarea', '[tabindex]'];
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: "events",
+    value: function events() {
+      if (this.modal) {
+        document.addEventListener('click', function (e) {
+          var clickedElement = e.target.closest('[data-path]');
+
+          if (clickedElement) {
+            var target = clickedElement.dataset.path;
+            var animation = clickedElement.dataset.animation;
+            var speed = clickedElement.dataset.speed;
+            this.animation = animation ? animation : 'fade';
+            this.speed = speed ? parseInt(speed) : 300;
+            this.modalContainer = document.querySelector("[data-target=\"".concat(target, "\"]"));
+            this.open();
+            return;
+          }
+
+          if (e.target.closest('.modal__btn-close')) {
+            this.close();
+            return;
+          }
+        }.bind(this));
+        window.addEventListener('keydown', function (e) {
+          if (e.keyCode == 27) {
+            if (this.isOpen) {
+              this.close();
+            }
+          }
+
+          if (e.keyCode == 9 && this.isOpen) {
+            this.focusCatch(e);
+            return;
+          }
+        }.bind(this));
+        this.modal.addEventListener('click', function (e) {
+          if (!e.target.classList.contains('modal__container') && !e.target.closest('.modal__container') && this.isOpen) {
+            this.close();
+          }
+        }.bind(this));
+      }
+    }
+  }, {
+    key: "open",
+    value: function open() {
+      var _this = this;
+
+      this.previousActiveElement = document.activeElement;
+      this.modal.style.setProperty('--transition-time', "".concat(this.speed / 1000, "s"));
+      this.modal.classList.add('is-open');
+      this.disableScroll();
+      this.modalContainer.classList.add('modal-open');
+      this.modalContainer.classList.add(this.animation);
+      setTimeout(function () {
+        _this.options.isOpen(_this);
+
+        _this.modalContainer.classList.add('animate-open');
+
+        _this.isOpen = true;
+
+        _this.focusTrap();
+      }, this.speed);
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      if (this.modalContainer) {
+        this.modalContainer.classList.remove('animate-open');
+        this.modalContainer.classList.remove(this.animation);
+        this.modal.classList.remove('is-open');
+        this.modalContainer.classList.remove('modal-open');
+        this.enableScroll();
+        this.options.isClose(this);
+        this.isOpen = false;
+        this.focusTrap();
+      }
+    }
+  }, {
+    key: "focusCatch",
+    value: function focusCatch(e) {
+      var focusable = this.modalContainer.querySelectorAll(this.focusElements);
+      var focusArray = Array.prototype.slice.call(focusable);
+      var focusedIndex = focusArray.indexOf(document.activeElement);
+
+      if (e.shiftKey && focusedIndex === 0) {
+        focusArray[focusArray.length - 1].focus();
+        e.preventDefault();
+      }
+
+      if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
+        focusArray[0].focus();
+        e.preventDefault();
+      }
+    }
+  }, {
+    key: "focusTrap",
+    value: function focusTrap() {
+      var focusable = this.modalContainer.querySelectorAll(this.focusElements);
+
+      if (this.isOpen) {
+        focusable[0].focus();
+      } else {
+        this.previousActiveElement.focus();
+      }
+    }
+  }, {
+    key: "disableScroll",
+    value: function disableScroll() {
+      var pagePosition = window.scrollY;
+      this.lockPadding();
+      document.body.classList.add('lock');
+      document.body.dataset.position = pagePosition;
+      document.body.style.top = -pagePosition + 'px';
+    }
+  }, {
+    key: "enableScroll",
+    value: function enableScroll() {
+      var pagePosition = parseInt(document.body.dataset.position, 10);
+      this.unlockPadding();
+      document.body.style.top = 'auto';
+      document.body.classList.remove('lock');
+      window.scroll({
+        top: pagePosition,
+        left: 0
+      });
+      document.body.removeAttribute('data-position');
+    }
+  }, {
+    key: "lockPadding",
+    value: function lockPadding() {
+      var paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+      this.fixBlocks.forEach(function (el) {
+        el.style.paddingRight = paddingOffset;
+      });
+      document.body.style.paddingRight = paddingOffset;
+    }
+  }, {
+    key: "unlockPadding",
+    value: function unlockPadding() {
+      this.fixBlocks.forEach(function (el) {
+        el.style.paddingRight = '0px';
+      });
+      document.body.style.paddingRight = '0px';
+    }
+  }]);
+
+  return Modal;
+}();
+
+var modal = new Modal({
+  isOpen: function isOpen(modal) {
+    console.log(modal);
+    console.log('opened');
+  },
+  isClose: function isClose() {
+    console.log('closed');
+  }
+});
+// const body = document.querySelector('body'),
+//   popupLinks = document.querySelectorAll('.popup-link'),
+//   lockPadding = document.querySelectorAll('.lock-padding'),
+//   popupCloseIcon = document.querySelectorAll('.close-popup');
+// let unlock = true;
+// const timeout = 300;
+// if (popupLinks.length > 0) {
+//   for (let index = 0; index < popupLinks.length; index++) {
+//     const popupLink = popupLinks[index];
+//     popupLink.addEventListener('click', function (e) {
+//       const popupName = popupLink.getAttribute('href').replace('#', ''),
+//         curentPopup = document.getElementById(popupName);
+//       popupOpen(curentPopup);
+//       e.preventDefault();
+//     });
+//   }
+// }
+// if (popupCloseIcon.length > 0) {
+//   for (let index = 0; index < popupCloseIcon.length; index++) {
+//     const el = popupCloseIcon[index];
+//     el.addEventListener('click', function (e) {
+//       popupClose(el.closest('.popup'));
+//       e.preventDefault();
+//     });
+//   }
+// }
+// function popupOpen(curentPopup) {
+//   if (curentPopup && unlock) {
+//     const popupActive = document.querySelector('.popup.open');
+//     if (popupActive) {
+//       popupClose(popupActive, false);
+//     } else {
+//       bodyLock();
+//     }
+//     curentPopup.classList.add('open');
+//     curentPopup.addEventListener('click', function (e) {
+//       if (!e.target.closest('.popup__content')) {
+//         popupClose(e.target.closest('.popup'));
+//       }
+//     });
+//   }
+// }
+// function popupClose(popupActive, doUnlock = true) {
+//   if (unlock) {
+//     popupActive.classList.remove('open');
+//     if (doUnlock) {
+//       bodyUnlock();
+//     }
+//   }
+// }
+// function bodyLock() {
+//   const lockPaddingValue = window.innerWidth - document.querySelector('.page').offsetWidth + 'px';
+//   if (lockPadding.length > 0) {
+//     for (let index = 0; index < lockPadding.length; index++) {
+//       const el = lockPadding[index];
+//       el.style.paddingRight = lockPaddingValue;
+//     }
+//   }
+//   body.style.paddingRight = lockPaddingValue;
+//   body.classList.add('lock');
+//   unlock = false;
+//   setTimeout(function () {
+//     unlock = true;
+//   }, timeout);
+// }
+// function bodyUnlock() {
+//   setTimeout(function () {
+//     if (lockPadding.length > 0) {
+//       for (let index = 0; index < lockPadding.length; index++) {
+//         const el = lockPadding[index];
+//         el.style.paddingRight = '0px';
+//       }
+//     }
+//     body.style.paddingRight = '0px';
+//     body.classList.remove('lock');
+//   }, timeout);
+//   unlock = false;
+//   setTimeout(() => {
+//     unlock = true;
+//   }, timeout);
+// }
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === 27) {
+//     const popupActive = document.querySelector('.popup.open');
+//     popupClose(popupActive);
+//   }
+// });
+"use strict";
+"use strict";
+
+if (document.querySelector('#selCases')) {
+  // Находим селект и контент табов
+  var select = document.getElementById("selCases");
+  var tabsContent = document.querySelectorAll(".tabs__content > .tabs__panel");
+
+  if (select) {
+    // Вижн информации при переключении опшинов в селекте
+    var toggleHidden = function toggleHidden() {
+      // Пробегаемся по псевдомассиву табов с контентом
+      tabsContent.forEach(function (div) {
+        // Если таб имеет класс совпадающий с value в селекте => вкл/выкл вижн
+        if (div.classList.contains("tabs__".concat(select.value))) {
+          div.classList.remove("hidden");
+          div.classList.add("tabs__panel--active");
+        } else {
+          div.classList.add("hidden");
+          div.classList.remove("tabs__panel--active");
+        }
+      });
+    }; // Следим за изменением селекта
+
+
+    select.addEventListener("change", toggleHidden);
+    toggleHidden();
+  }
+}
+"use strict";
+
+if (document.querySelector('.seo__text')) {
+  var button = document.querySelector(".seo__btn");
+  var text = document.querySelector('.seo__text');
+
+  if (button) {
+    button.addEventListener('click', function (e) {
+      if (text.classList.contains('open')) {
+        text.classList.remove('open');
+        button.innerHTML = 'Показать полностью';
+      } else {
+        text.classList.add('open');
+        button.innerHTML = 'Скрыть';
+      }
+    });
+  }
+}
+
+;
+"use strict";
+
+var sliders = document.querySelectorAll('.tabs-slider');
+sliders.forEach(function (el) {
+  var casesSlider = new Swiper(el, {
+    // option
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    // pagination
+    pagination: {
+      el: el.querySelector('.tabs__pagination'),
+      type: 'bullets',
+      clickable: true
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: el.parentNode.querySelectorAll('.tabs__arrow--next')[0],
+      prevEl: el.parentNode.querySelectorAll('.tabs__arrow--prev')[0]
+    }
+  });
+});
+"use strict";
+
+var companySlider = new Swiper('.company__slider', {
+  // option
+  slidesPerView: 2,
+  spaceBetween: 20,
+  grabCursor: true,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.company__btn--prev',
+    prevEl: '.company__btn--next'
+  },
+  // pagination
+  pagination: {
+    el: '.company__pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    321: {
+      slidesPerView: 1
+    },
+    576: {
+      slidesPerView: 2
+    },
+    769: {
+      slidesPerView: 2
+    }
+  }
+});
+"use strict";
+
+var swiper = new Swiper('.reviews__slider', {
+  // option
+  slidesPerView: 4,
+  spaceBetween: 20,
+  grabCursor: true,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev'
+  },
+  // pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    321: {
+      slidesPerView: 1.5
+    },
+    600: {
+      slidesPerView: 2.5
+    },
+    993: {
+      slidesPerView: 4
+    }
+  }
+});
+"use strict";
+
+var situationSlider = new Swiper('.subservices-situations__slider', {
+  // option
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.subservices-situations__next',
+    prevEl: '.subservices-situations__prev'
+  },
+  // pagination
+  pagination: {
+    el: '.subservices-situations__pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    576: {
+      slidesPerView: 1.5
+    },
+    768: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 3
+    }
+  }
+});
+"use strict";
+
+if (document.querySelector('.tabs')) {
+  var tabs1 = new GraphTabs('tab', {
+    isChanged: function isChanged(tabs) {
+      console.log(tabs);
+    }
+  });
+}
+"use strict";
+
+if (document.getElementById("selCases")) {
+  NiceSelect.bind(document.getElementById("selCases"));
+}
+
+baguetteBox.run('.gallery');
+//# sourceMappingURL=main.js.map
