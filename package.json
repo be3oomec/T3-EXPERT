@@ -11,8 +11,7 @@
     "cache": "gulp cache",
     "backend": "gulp backend",
     "code": "editorconfig-checker",
-    "deploy": "gh-pages -d app",
-    "predeploy": "gulp build"
+    "deploy": "gh-pages -d app"
   },
   "author": "MaxGraph",
   "license": "ISC",
